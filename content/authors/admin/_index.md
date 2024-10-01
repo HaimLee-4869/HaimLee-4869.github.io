@@ -50,7 +50,7 @@ interests:
 
 education:
   - area: BSc Computer Science and Engineering
-    institution: Massachusetts Institute of Technology
+    institution: Jeonbuk National University
     date_start: 2022-03-02
     date_end: 2026-02-28
     summary: |
