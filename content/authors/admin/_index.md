@@ -70,7 +70,7 @@ work:
     company_url: ''
     company_logo: ''
     date_start: 2027-01-01
-    date_end: present
+    date_end: 2050-12-30
     summary: |
       Responsibilities include:
       - Data analysis and planning
@@ -96,7 +96,7 @@ skills:
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
-      - name: Hiking
+      - name: running
         description: ''
         percent: 60
         icon: person-simple-walk
