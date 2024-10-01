@@ -1,17 +1,17 @@
 ---
 # Display name
-title: 吳健雄
+title: 李恩情(이은정)
 
 # Name pronunciation (optional)
-name_pronunciation: Chien Shiung Wu
+name_pronunciation: Lee Eunjung
 
 # Full name (for SEO)
-first_name: Shiung Wu
-last_name: Chien
+first_name: Eunjung #이름
+last_name: Lee  #성
 
 # Status emoji
 status:
-  icon: ☕️
+  icon: 🍀
 
 # Is this the primary user of the site?
 superuser: true
