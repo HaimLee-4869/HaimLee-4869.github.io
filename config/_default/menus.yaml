@@ -32,14 +32,6 @@ main:
   - name: Projects
     url: projects/
     weight: 30
-  - parent: Projects
-    name: Submit
-    url: Sub_mit
-    weight: 35
-  - parent: Projects
-    name: Data Science
-    url: Data_Science
-    weight: 38
 
 
   - name: Contact
