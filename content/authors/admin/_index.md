@@ -14,11 +14,9 @@ status:
   icon: 🍀
 
 # Is this the primary user of the site?
-#이거머임?
 superuser: true
 
 # Highlight the author in author lists? (true/false)
-#이거머임?
 highlight_name: true
 
 # Role/position/tagline
