@@ -43,8 +43,9 @@ profiles:
 
 
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
+  - Data Science
+  - DataBase
+  - Computer Network
   - Information Retrieval
 
 education:
