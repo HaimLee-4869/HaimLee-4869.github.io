@@ -9,7 +9,7 @@ sections:
     content:
       title: Contact
       text: |-
-        <br> <span style="font-size:95%">문의사항이 있으시면 아래로 연락주세요! 감사합니다💚</span> <br>
+        <br> <span style="font-size:95%">문의사항이 있으시면 아래로 연락주세요!! 감사합니다💚</span> <br>
       email: 202212214(at)jbnu.ac.kr
       phone: +82-10-6379-7336
       address:
