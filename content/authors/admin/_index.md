@@ -1,6 +1,6 @@
 ---
 # Display name
-title: 李恩情(이은정)
+title: 이은정
 
 # Name pronunciation (optional)
 name_pronunciation: Lee Eunjung
@@ -14,18 +14,21 @@ status:
   icon: 🍀
 
 # Is this the primary user of the site?
+#이거머임?
 superuser: true
 
 # Highlight the author in author lists? (true/false)
+#이거머임?
 highlight_name: true
 
 # Role/position/tagline
-role: Chief Scientist
+role: Data Scientist
 
 # Organizations/Affiliations to display in Biography blox
+#교육기관
 organizations:
-  - name: OpenAI
-    url: https://openai.com/
+  - name: JBNU CSE
+    url: https://csai.jbnu.ac.kr/csai/index.do
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
