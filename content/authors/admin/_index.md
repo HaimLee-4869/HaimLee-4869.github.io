@@ -110,12 +110,12 @@ skills:
         icon: camera
 
 languages:
-  - name: English
+  - name: Korean
     percent: 100
-  - name: Chinese
-    percent: 75
-  - name: Portuguese
-    percent: 25
+  - name: English
+    percent: 80
+  - name: Japanese
+    percent: 60
 
 # Awards.
 #   Add/remove as many awards below as you like.
@@ -151,4 +151,4 @@ awards:
 
 ## About Me
 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Eunjung Lee is an undergraduate student in Computer Science&Engineering at JBNU. Her areas of interest include Data Science, DataBase, Computer Network, and Information Retrieval. She is studying Web Service Design, System Security, and Computer Graphics this semester.
