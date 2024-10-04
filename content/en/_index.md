@@ -57,13 +57,13 @@ sections:
   - block: collection
     id: talks
     content:
-      title: Research
+      title: Extracurricular Activities
       filters:
         folders:
           - event
     design:
       view: article-grid
-      columns: 1
+      columns: 3
   - block: collection
     id: news
     content:
