@@ -21,12 +21,12 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Data Scientist
+role: 데이터 분석가
 
 # Organizations/Affiliations to display in Biography blox
 #교육기관
 organizations:
-  - name: JBNU CSE
+  - name: 전북대학교 컴퓨터공학부
     url: https://csai.jbnu.ac.kr/csai/index.do
 
 # Social network links
@@ -45,45 +45,45 @@ interests:
   - 데이터 과학
   - 데이터베이스
   - 컴퓨터 네트워크
-  - Information Retrieval
+  - 정보 검색
 
 education:
-  - area: BSc Computer Science and Engineering
-    institution: Jeonbuk National University
+  - area: 컴퓨터공학부
+    institution: 전북대학교
     date_start: 2022-03-02
     date_end: 2026-02-28
     summary: |
-      GPA: 3.9/4.5
+      학점: 3.9/4.5
       
-      Courses included:
-      - Database
-      - Computer Architecture
-      - Data Communication
-      - Computer Network
-      - Web Service Design
-      - System Security
+      이수 과목:
+      - 데이터베이스
+      - 컴퓨터구조
+      - 데이터통신
+      - 컴퓨터네트워크
+      - 웹서비스설계
+      - 시스템보안
       
 work:
-  - position: Data Analyst
-    company_name: Bank
+  - position: 데이터 분석가
+    company_name: 은행
     company_url: ''
     company_logo: ''
     date_start: 2027-01-01
     date_end: 2050-12-30
     summary: |
-      Responsibilities include:
-      - Data analysis and planning
+      책임 업무:
+      - 데이터 기획 및 분석
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
   - name: Technical Skills
     items:
-      - name: Python
+      - name: 파이썬
         description: ''
         percent: 80
         icon: code-bracket
-      - name: Data Science
+      - name: 데이터과학
         description: ''
         percent: 100
         icon: chart-bar
@@ -95,29 +95,29 @@ skills:
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
-      - name: running
+      - name: 런닝
         description: ''
         percent: 60
         icon: person-simple-walk
-      - name: Cats
+      - name: 고양이 길들이기
         description: ''
         percent: 100
         icon: cat
-      - name: Photography
+      - name: 사진 촬영
         description: ''
         percent: 80
         icon: camera
 
 languages:
-  - name: Korean
+  - name: 한국어
     percent: 100
-  - name: English
+  - name: 영어
     percent: 80
-  - name: Japanese
+  - name: 일본어
     percent: 60
 
 ---
 
 ## About Me
 
-은정이 한글 설명.
+저(이은정)는 전북대학교 컴퓨터공학과 학부생입니다. 제 관심 분야는 데이터 과학, 데이터베이스, 컴퓨터네트워크 및 정보검색입니다. 이번 학기에는 웹서비스설계, 컴퓨터그래픽스, 시스템보안을 공부하고 있습니다. 
