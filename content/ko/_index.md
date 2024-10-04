@@ -43,7 +43,7 @@ sections:
     design:
       columns: '1'
   - block: collection
-    id: works
+    id: works 
     content:
       title: Featured Publications
       filters:
