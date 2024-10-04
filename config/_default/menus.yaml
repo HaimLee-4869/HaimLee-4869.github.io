@@ -32,7 +32,7 @@ main:
   - name: Projects
     url: projects/
     weight: 30
-    child: subproject
+  -parent: Projects
     url: subproject/
     weight: 35
 
