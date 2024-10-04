@@ -92,9 +92,9 @@ ko:
     weight: 40
 
   - name: 연락
-    url: /en/contact/
+    url: /ko/contact/
     weight: 50    
-    
+
 #  title: Chinese website title...
 #  params:
 #    description: Site description in Chinese...
