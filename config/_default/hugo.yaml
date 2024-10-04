@@ -14,7 +14,7 @@ baseURL: 'https://haimlee-4869.github.io/'
 
 defaultContentLanguage: en
 hasCJKLanguage: false
-defaultContentLanguageInSubdir: false
+defaultContentLanguageInSubdir: true
 removePathAccents: true
 
 ############################
