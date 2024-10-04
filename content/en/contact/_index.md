@@ -10,9 +10,9 @@ sections:
         <div style="text-align: justify;">
         If you have Question plz dm me
 
-        - **이메일**: [j_haim4869@naver.com](mailto:j_haim4869@naver.com)
-        - **전화번호**: 010-6379-7336
-        - **주소**: 567 Baekje-daero, Jeonju-si, Jeollabuk-do
+        - E-mail: j_haim4869@naver.com(mailto:j_haim4869@naver.com)
+        - Phone-number: 010-6379-7336
+        - Address: 567 Baekje-daero, Jeonju-si, Jeollabuk-do
         </div>
 
         ## 위치
@@ -21,6 +21,6 @@ sections:
     design:
       columns: '1'
       spacing:
-        padding: ['60px', '0', '20px', '0']
+        padding: ['20px', '0', '20px', '0']
       css_class: fullscreen
 ---
