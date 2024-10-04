@@ -32,4 +32,4 @@ map:
   provider: 'mapnik'
   api_key: ''
   zoom: 15
-—--
+---
