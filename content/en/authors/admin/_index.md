@@ -114,7 +114,7 @@ languages:
   - name: English
     percent: 80
   - name: Japanese
-    percent: 60
+    percent: 50
 
 ---
 
