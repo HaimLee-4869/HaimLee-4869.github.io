@@ -32,6 +32,9 @@ main:
   - name: Projects
     url: projects/
     weight: 30
+    parent: subproject
+    url: subproject/
+    weight: 35
 
 
   - name: Teaching
