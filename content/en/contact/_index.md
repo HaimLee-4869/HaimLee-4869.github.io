@@ -21,6 +21,6 @@ sections:
     design:
       columns: '1'
       spacing:
-        padding: ['20px', '0', '40px', '0']
+        padding: ['60px', '0', '20px', '0']
       css_class: fullscreen
 ---
