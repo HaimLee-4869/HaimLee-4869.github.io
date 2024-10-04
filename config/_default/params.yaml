@@ -14,7 +14,7 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: ''
-    description: 'Eunjung's Website!'
+    description: 'The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.'
     twitter: 'GetResearchDev'
   analytics:
     google_analytics: ''
@@ -61,4 +61,4 @@ features:
   map:
     provider: 'mapnik'
     api_key: ' '
-    zoom: 15
+  zoom: 15
