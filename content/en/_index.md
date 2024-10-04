@@ -17,7 +17,7 @@ sections:
       # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV
-        url: uploads/RI 5기_개별 프로젝트 기획안 양식.pdf
+        url: uploads/resume.pdf
     design:
       css_class: dark
       background:
