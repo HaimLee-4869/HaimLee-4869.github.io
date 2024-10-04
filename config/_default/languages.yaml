@@ -16,8 +16,8 @@ en:
     weight: 10
 
 
-  - name: Papers
-    url: /en/#papers
+  - name: Works
+    url: /en/#works
     weight: 11
 
 
@@ -62,8 +62,8 @@ ko:
     weight: 10
 
 
-  - name: 페이퍼
-    url: /ko/#papers
+  - name: 워크
+    url: /ko/#works
     weight: 11
 
 
