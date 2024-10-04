@@ -33,6 +33,7 @@ main:
     url: projects/
     weight: 30
   -parent: Projects
+    name: Subproject
     url: subproject/
     weight: 35
 
