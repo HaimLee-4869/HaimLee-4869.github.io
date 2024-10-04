@@ -45,7 +45,7 @@ sections:
   - block: collection
     id: works
     content:
-      title: Featured Publications
+      title: My projects
       filters:
         folders:
           - publication
