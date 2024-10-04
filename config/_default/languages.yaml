@@ -45,6 +45,10 @@ en:
     url: /en/teaching/
     weight: 40
 
+  - name: Contact
+    url: /en/contact/
+    weight: 50
+
 # Uncomment the lines below to configure your website in a second language.
 ko: 
   languageCode: ko
@@ -86,6 +90,11 @@ ko:
   - name: 티칭
     url: /ko/teaching/
     weight: 40
+
+  - name: 연락
+    url: /en/contact/
+    weight: 50    
+    
 #  title: Chinese website title...
 #  params:
 #    description: Site description in Chinese...
