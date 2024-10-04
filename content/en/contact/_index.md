@@ -10,7 +10,7 @@ sections:
         <div style="text-align: justify;">
         If you have Question plz dm me
 
-        - E-mail: j_haim4869@naver.com
+        - E-mail: j_haim4869(at)naver.com
         - Phone-number: 010-6379-7336
         - Address: 567 Baekje-daero, Deokjin-gu, Jeonju-si, Jeonbuk State, 54896 Republic of Korea 
         </div>
