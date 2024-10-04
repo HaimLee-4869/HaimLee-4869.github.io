@@ -17,7 +17,7 @@ sections:
       # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV
-        url: static/uploads/웹서비스설계 이은정.pdf
+        url: uploads/resume.pdf
     design:
       css_class: dark
       background:
