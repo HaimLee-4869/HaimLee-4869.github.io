@@ -6,12 +6,86 @@
 en:
   languageCode: en-us
   # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
-  #contentDir: content/en
+  contentDir: content/en
+  weight: 1
+  description: Eunjung's Website!
+  menu:
+  main:
+  - name: Bio
+    url: /en
+    weight: 10
+
+
+  - name: Papers
+    url: /en/#papers
+    weight: 11
+
+
+  - name: Talks
+    url: /en/#talks
+    weight: 12
+
+
+  - name: News
+    url: /en/#news
+    weight: 13
+
+
+  - name: Experience
+    url: /en/experience/
+    weight: 20
+
+
+  - name: Projects
+    url: /en/projects/
+    weight: 30
+
+
+  - name: Teaching
+    url: /en/teaching/
+    weight: 40
 
 # Uncomment the lines below to configure your website in a second language.
-#zh:
-#  languageCode: zh-Hans
-#  contentDir: content/zh
+ko: 
+  languageCode: ko
+  contentDir: content/ko
+  weight: 2
+  description: 은정이 홈페이지
+  menu:
+  main:
+  - name: 프로필
+    url: /ko
+    weight: 10
+
+
+  - name: 페이퍼
+    url: /ko/#papers
+    weight: 11
+
+
+  - name: 토크
+    url: /ko/#talks
+    weight: 12
+
+
+  - name: 뉴스
+    url: /ko/#news
+    weight: 13
+
+
+  - name: 경험
+    url: /ko/experience/
+    weight: 20
+
+
+  - name: 프로젝트
+    url: /ko/projects/
+    weight: 30
+
+
+  - name: 티칭
+    url: /ko/teaching/
+    weight: 40
 #  title: Chinese website title...
 #  params:
 #    description: Site description in Chinese...
