@@ -1,19 +1,12 @@
 ---
-title: Example Talk
+title: SK AI DATA ACADEMY
 
-event: Hugo Blox Builder Conference
-event_url: https://example.org
+host: SK
+host_url: https://connect.mysuni.com/suni-main/auth/login?contentUrl=/suni-community/community/COMMUNITY-1g/home?cineroomId=ne2-m7-c20&contentUrl=
 
-location: Hugo Blox Builder HQ
-address:
-  street: 450 Serra Mall
-  city: Stanford
-  region: CA
-  postcode: '94305'
-  country: United States
+summary: SK AI DATA ACADEMY short
 
-summary: An example talk using Hugo Blox Builder's Markdown slides feature.
-abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam.'
+abstract: SK AI DATA ACADEMY long long
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
@@ -41,10 +34,8 @@ image:
 #    icon_pack: fab
 #    name: Follow
 #    url: https://twitter.com/georgecushen
-url_code: 'https://github.com'
-url_pdf: ''
-url_slides: 'https://slideshare.net'
-url_video: 'https://youtube.com'
+url_code: 'https://github.com/HaimLee-4869'
+
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.
