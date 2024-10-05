@@ -1,21 +1,21 @@
 ---
-title: SK AI DATA ACADEMY
+title: Book Fair
 
-host: SK
-host_url: https://connect.mysuni.com/suni-main/auth/login?contentUrl=/suni-community/community/COMMUNITY-1g/home?cineroomId=ne2-m7-c20&contentUrl=
+host: Jeonju Book Fair
+host_url: https://www.instagram.com/jj.bookfair/
 
-summary: We covered SK Group's field data and field projects.
+summary: I went to the Jeonju Book Fair.
 
-abstract: SK AI DATA ACADEMY is a program that conducts projects using SK Group’s field data. I conducted a rebar unit price prediction project using 'SK Eco Plant''s AI model, a project to develop a CCTV image classification model for 'SK Telecom', and a project to develop a sound classification model for the hearing impaired for 'Soboro'. It was a great opportunity to develop practical skills by directly handling data used in practice.
+abstract: My hobby is reading books. That's why I also like going to book fairs. I went to Jeonju Book Fair, a book fair held in Jeonju. The experience of being able to talk with various independently published authors was really interesting to me.
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: '2024-07-03T13:00:00Z'
-date_end: '2024-08-14T15:00:00Z'
+date: '2023-08-01T13:00:00Z'
+date_end: '2023-08-02T15:00:00Z'
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: '2024-08-15T00:00:00Z'
+publishDate: '2023-08-03T00:00:00Z'
 
 authors:
   - admin

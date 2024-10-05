@@ -1,21 +1,21 @@
 ---
-title: SK AI DATA ACADEMY
+title: Musical
 
-host: SK
-host_url: https://connect.mysuni.com/suni-main/auth/login?contentUrl=/suni-community/community/COMMUNITY-1g/home?cineroomId=ne2-m7-c20&contentUrl=
+host: Interpark
+host_url: https://tickets.interpark.com/goods/22000970
 
-summary: We covered SK Group's field data and field projects.
+summary: I like watching musicals
 
-abstract: SK AI DATA ACADEMY is a program that conducts projects using SK Group’s field data. I conducted a rebar unit price prediction project using 'SK Eco Plant''s AI model, a project to develop a CCTV image classification model for 'SK Telecom', and a project to develop a sound classification model for the hearing impaired for 'Soboro'. It was a great opportunity to develop practical skills by directly handling data used in practice.
+abstract: I often go to see musicals. So far, I have seen musicals such as Fan Letter, Jekyll and Hyde, Frankenstein, Death Note, Bear the Musical, The Brothers Karamazov, and The Fiction.
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: '2024-07-03T13:00:00Z'
-date_end: '2024-08-14T15:00:00Z'
+date: '2022-08-01T13:00:00Z'
+date_end: '2022-08-02T15:00:00Z'
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: '2024-08-15T00:00:00Z'
+publishDate: '2022-09-01T00:00:00Z'
 
 authors:
   - admin

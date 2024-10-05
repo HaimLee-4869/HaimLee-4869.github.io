@@ -1,21 +1,18 @@
 ---
-title: SK AI DATA ACADEMY
+title: KIOSK Programming
 
-host: SK
-host_url: https://connect.mysuni.com/suni-main/auth/login?contentUrl=/suni-community/community/COMMUNITY-1g/home?cineroomId=ne2-m7-c20&contentUrl=
+summary: I created a kiosk program using Ubuntu Linux.
 
-summary: We covered SK Group's field data and field projects.
-
-abstract: SK AI DATA ACADEMY is a program that conducts projects using SK Group’s field data. I conducted a rebar unit price prediction project using 'SK Eco Plant''s AI model, a project to develop a CCTV image classification model for 'SK Telecom', and a project to develop a sound classification model for the hearing impaired for 'Soboro'. It was a great opportunity to develop practical skills by directly handling data used in practice.
+abstract: In the 'Linux Programming' class in the first semester of 2023, we conducted a team project to create a kiosk program using Linux. The kiosk program we created is a system implemented with a Linux-based server-client model. This enables the management and use of kiosks through interaction between servers and clients. I was able to understand programming and network communication concepts using system calls.
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: '2024-07-03T13:00:00Z'
-date_end: '2024-08-14T15:00:00Z'
+date: '2023-03-03T13:00:00Z'
+date_end: '2030-07-01T15:00:00Z'
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: '2024-08-15T00:00:00Z'
+publishDate: '2023-08-01T00:00:00Z'
 
 authors:
   - admin

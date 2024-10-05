@@ -18,10 +18,8 @@ sections:
         folders:
           - teaching
     design:
-      view: article-grid
+      view: community/custom_card
       columns: 2
 
 
-
-      
 ---
