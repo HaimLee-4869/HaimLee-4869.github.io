@@ -32,10 +32,10 @@ sections:
           parallax: false
   - block: markdown
     content:
-      title: '📚 This is my Blog'
+      title: '📚 어서오세요, 제 블로그에!'
       subtitle: ''
       text: |-
-        hello! This blog contains my project records, my external activity records, my reading records, and my hobbies records. Please come visit us often! thank you 😃
+        안녕하세요! 이 블로그는 저의 프로젝트 기록, 대외활동 기록, 독서 기록, 취미 기록 등이 담겨 있는 공간입니다. 자주 들러주세요! 감사합니다 😃
     design:
       columns: '1'
   - block: collection

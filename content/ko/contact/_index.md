@@ -8,11 +8,11 @@ sections:
       title: contact
       text: |-
         <div style="text-align: justify;">
-        If you have any questions, please contact me!
+        문의사항이 있으시면 언제든지 연락주세요!
 
-        - E-mail: j_haim4869(at)naver.com
-        - Phone-number: 010-6379-7336
-        - Address: 567 Baekje-daero, Deokjin-gu, Jeonju-si, Jeonbuk State, 54896 Republic of Korea 
+        - 이메일: j_haim4869(at)naver.com
+        - 전화번호: 010-6379-7336
+        - 주소: 전북특별자치도 전주시 덕진구 백제대로 567 전북대학교 컴퓨터공학부
         </div>
 
         ## 위치

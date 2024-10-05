@@ -1,12 +1,12 @@
 ---
-title: Book Fair
+title: 전주책쾌
 
-host: Jeonju Book Fair
+host: 전주
 host_url: https://www.instagram.com/jj.bookfair/
 
-summary: I went to the Jeonju Book Fair.
+summary: 전주책쾌에 다녀왔습니다!
 
-abstract: My hobby is reading books. That's why I also like going to book fairs. I went to Jeonju Book Fair, a book fair held in Jeonju. The experience of being able to talk with various independently published authors was really interesting to me.
+abstract: 독서는 제 취미 중 하나입니다. 그래서 북페어에 가는 것도 좋아하는데요, 작년에는 전주에서 열리는 북페어인 '전주책쾌'에 다녀왔습니다! 다양한 독립출판 작가분들과 함께 이야기를 나눌 수 있었던 경험은 정말 즐거웠던 기억으로 남아있습니다!
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.

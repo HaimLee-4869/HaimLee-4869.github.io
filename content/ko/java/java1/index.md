@@ -1,9 +1,9 @@
 ---
-title: kirby Game Programming
+title: 커비 게임 프로그래밍
 
-summary: I imitated the Kirby game in Java.
+summary: JAVA로 커비 게임을 모방했습니다. 
 
-abstract: In the 'Java Programming' class in the first semester of 2023, we conducted a team project to create a program in Java. Our team decided to create a game that mimics the Kirby game in Java.
+abstract: 2023년 1학기 '객체지향프로그래밍' 수업에서 JAVA로 프로그램을 만드는 팀 프로젝트를 진행했습니다. 우리 팀은 JAVA로 커비 게임을 모방한 게임을 만들었습니다. 
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.

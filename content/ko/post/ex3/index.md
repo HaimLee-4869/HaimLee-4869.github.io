@@ -1,12 +1,12 @@
 ---
-title: JIFF
+title: 전주국제영화제
 
 host: Jeonju
 host_url: https://www.jeonjufest.kr/
 
-summary: I went to the Jeonju International Film Festival.
+summary: 전주국제영화제에 다녀왔습니다!
 
-abstract: I like watching movies. That’s why I love that Jeonju is a movie city. Jeonju holds the Jeonju International Film Festival every spring. The best movie for me in 2023 was ‘Revolution +1’. The best movie for me in 2024 was 'All the Long Nights'.
+abstract: 저는 영화 보는 것을 좋아합니다. 그래서 전주가 영화의 도시라는 점을 정말 좋아해요! 매년 봄, 전주에서는 전주국제영화제를 개최합니다. 2023년 JIFF에서 가장 재밌었던 영화는 '레볼루션 +1'이었습니다. 2024년 JIFF에서 가장 재밌었던 영화는 '새벽의 모든'이었습니다. 
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.

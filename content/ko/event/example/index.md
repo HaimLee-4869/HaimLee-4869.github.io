@@ -4,9 +4,9 @@ title: SK AI DATA ACADEMY
 host: SK
 host_url: https://connect.mysuni.com/suni-main/auth/login?contentUrl=/suni-community/community/COMMUNITY-1g/home?cineroomId=ne2-m7-c20&contentUrl=
 
-summary: We covered SK Group's field data and field projects.
+summary: SK 그룹의 현장 데이터와 현업 프로젝트를 다루었습니다. 
 
-abstract: SK AI DATA ACADEMY is a program that conducts projects using SK Group’s field data. I conducted a rebar unit price prediction project using 'SK Eco Plant''s AI model, a project to develop a CCTV image classification model for 'SK Telecom', and a project to develop a sound classification model for the hearing impaired for 'Soboro'. It was a great opportunity to develop practical skills by directly handling data used in practice.
+abstract: SK AI DATA ACADEMY는 SK 그룹의 현장 데이터를 활용해서 프로젝트를 진행하는 프로그램입니다. 저는 'SK 에코플랜트'의 'AI 모델을 활용한 철근 단가 예측 프로젝트', 'SK 텔레콤'의 'CCTV 영상 분류 모델 개발 프로젝트', '소보로'의 '청각장애인을 위한 소류 분류 모델 개발 프로젝트'를 진행했습니다. 현업에서 다루는 데이터를 직접 사용하면서 실무 능력을 키울 수 있는 좋은 기회였습니다!
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
