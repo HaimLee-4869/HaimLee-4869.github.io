@@ -1,0 +1,47 @@
+//카드에 링크 추가
+.card-title-2 a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .card-title-2 a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 카드 투명도 조정 */
+  .content-card-2 {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .content-card-2:hover {
+    background-color: rgba(240, 248, 255, 0.9);
+  }
+  
+  /* 버튼 호버 시 색상 변경 */
+  .button {
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #483d8b;
+  }
+  
+  /* Light 모드에서 연보라색 배경 */
+  body {
+    background-color: #dadfff;
+  }
+  
+  .content-card {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
