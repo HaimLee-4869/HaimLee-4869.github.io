@@ -1,8 +1,8 @@
 ---
 title: Musical
 
-host: SK
-host_url: 
+host: DEATH NOTE
+host_url: https://connect.mysuni.com/suni-main/auth/login?contentUrl=/suni-community/community/COMMUNITY-1g/home?cineroomId=ne2-m7-c20&contentUrl=
 
 summary: DEATH NOTE short
 
@@ -34,7 +34,7 @@ image:
 #    icon_pack: fab
 #    name: Follow
 #    url: https://twitter.com/georgecushen
-url: 'https://github.com/HaimLee-4869'
+url_code: 'https://github.com/HaimLee-4869'
 
 
 # Markdown Slides (optional).
