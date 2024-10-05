@@ -1,10 +1,9 @@
 ---
-title: Java project
-type: landing
+title: JAVA project
 
-sections:
-  - block: markdown
-    content:
-      title: 'java project test'
+view: community/custom_card
 
+banner:
+  caption: 'Image credit: [**Unsplash**](https://unsplash.com/)'
+  image: 'kkirby.jpg'
 ---
