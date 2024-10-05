@@ -76,5 +76,20 @@ sections:
       view: article-grid
       columns: 3
 
-
+  - block: community/slider
+    content:
+      title: Reading
+      slides:
+      - background: 
+          content: 마음사전, 김소연
+          image:
+            filename: mainslider/heartdic.jpg
+      - background: 
+          content: 프로테스탄트윤리와자본주의정신, 막스 베버
+          image:
+            filename: mainslider/ethic.jpg
+      - background:
+          content: 마음, 나츠메 소세키 
+          image:
+            filename: mainslider/kokoro.jpg 
 ---
