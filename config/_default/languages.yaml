@@ -7,7 +7,7 @@ en:
   languageCode: en-us
   # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
   contentDir: content/en
-  weight: 1
+  weight: 2
   description: Eunjung's Website!
   menu:
   main:
@@ -53,7 +53,7 @@ en:
 ko: 
   languageCode: ko
   contentDir: content/ko
-  weight: 2
+  weight: 1
   description: 은정이 홈페이지
   menu:
   main:
