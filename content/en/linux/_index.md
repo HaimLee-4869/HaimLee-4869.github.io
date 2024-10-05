@@ -1,7 +1,7 @@
 ---
 title: Linux project
 
-view: community/custom_card
+view: community/custom_compact
 
 banner:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com/)'
