@@ -10,7 +10,7 @@ sections:
         folders:
           - linux
     design:
-      view: community/card1
+      view: grid
       columns: 1
       cards:
         - image: 
