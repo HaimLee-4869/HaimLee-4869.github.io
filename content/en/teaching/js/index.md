@@ -1,13 +1,9 @@
 ---
 title: SAMSUNG DREAMCLASS
-summary: short descript
-date: 2023-10-24
+summary: I am doing educational outreach to middle school students.
+date: 2024-08-01
 type: docs
 math: false
----
+--- 
 
-[Hugo Blox Builder](https://hugoblox.com) is designed to give technical content creators a seamless experience. You can focus on the content and the Hugo Blox Builder which this template is built upon handles the rest.
-
-**Embed videos, podcasts, code, LaTeX math, and even test students!**
-
-On this page, you'll find some examples of the types of technical content that can be rendered with Hugo Blox.
+[Samsung Dream Class](https://www.dreamclass.org/index.do) is a youth education program in which college students serve as mentors to middle school students who lack educational resources and support their learning. To prevent insufficient conditions from becoming a gap between dreams, we have introduced an online/offline hybrid education system and provide not only basic learning, but also career and vocational education to form career aspirations, and future competency education that will become basic knowledge in the era of the 4th Industrial Revolution. I am mentoring 6 children at the INHU Youth Center in Jeonju.

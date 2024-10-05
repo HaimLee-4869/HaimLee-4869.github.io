@@ -2,7 +2,7 @@
 title: Remote Internship
 
 host: CJXHANKYUNGXFirb
-host_url: https://www.instagram.com/remote_internship/
+host_url: https://www.instagram.com/remote_internship/ 
 
 summary: data analysis program
 
