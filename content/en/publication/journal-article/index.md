@@ -6,11 +6,11 @@ authors:
 author_notes:
 - "Equal contribution"
 - "Equal contribution"
-date: "2015-09-01T00:00:00Z"
+date: "2024-09-01T00:00:00Z"
 doi: ""
-
+ 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2017-01-01T00:00:00Z"
+publishDate: "2024-09-02T00:00:00Z"
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
@@ -20,10 +20,10 @@ publishDate: "2017-01-01T00:00:00Z"
 # Publication name and optional abbreviated publication name.
 publication: "*Remote Internship*"
 
-abstract: Data analysis on food desertification long long
+abstract: Remote Internship is a program in which students from local national universities undergo learning and evaluation for the purpose of training CDS (Citizen Data Scientists), and then carry out a project based on mentoring that allows selected students to gain relevant job experience. I learned data analysis through a remote internship and am currently working on a team project on the topic of 'food desertification'.
 
 # Summary. An optional shortened abstract.
-summary: Data analysis on food desertification short
+summary: Data analysis on food desertification project
 
 tags:
 - My projects 
@@ -31,17 +31,7 @@ tags:
 
 featured: true
 
-# links:
-# - name: ""
-#   url: ""
-url_pdf: http://arxiv.org/pdf/1512.04133v1
-url_code: 'https://github.com/HugoBlox/hugo-blox-builder'
-url_dataset: ''
-url_poster: ''
-url_project: ''
-url_slides: ''
-url_source: ''
-url_video: ''
+
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
@@ -64,13 +54,3 @@ projects: []
 #   Otherwise, set `slides: ""`.
 slides: example
 ---
-
-{{% callout note %}}
-Click the *Cite* button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-{{% /callout %}}
-
-{{% callout note %}}
-Create your slides in Markdown - click the *Slides* button to check out the example.
-{{% /callout %}}
-
-Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/).

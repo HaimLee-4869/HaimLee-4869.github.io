@@ -1,18 +1,18 @@
 ---
-title: kirby game programming
+title: kirby Game Programming
 
-summary: kiosk short
+summary: I imitated the Kirby game in Java.
 
-abstract: KIOSK long long
+abstract: In the 'Java Programming' class in the first semester of 2023, we conducted a team project to create a program in Java. Our team decided to create a game that mimics the Kirby game in Java.
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: '2030-06-01T13:00:00Z'
-date_end: '2030-06-01T15:00:00Z'
+date: '2023-03-03T13:00:00Z'
+date_end: '2023-07-01T15:00:00Z'
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: '2017-01-01T00:00:00Z'
+publishDate: '2023-12-01T00:00:00Z'
 
 authors:
   - admin
@@ -48,17 +48,4 @@ slides: ""
 #   Otherwise, set `projects = []`.
 projects:
   - example
----
-
-{{% callout note %}}
-Click on the **Slides** button above to view the built-in slides feature.
-{{% /callout %}}
-
-Slides can be added in a few ways:
-
-- **Create** slides using Hugo Blox Builder's [_Slides_](https://docs.hugoblox.com/reference/content-types/) feature and link using `slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://docs.hugoblox.com/reference/markdown/).
-
-Further event details, including [page elements](https://docs.hugoblox.com/reference/markdown/) such as image galleries, can be added to the body of this page.
 ---
