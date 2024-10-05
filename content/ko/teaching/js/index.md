@@ -4,6 +4,7 @@ summary: 중학생을 대상으로 교육봉사를 하고 있습니다.
 date: 2024-08-01
 type: docs
 math: false
+text: |-
         <div style="text-align: justify;">
         즐거운 멘토링~
         </div>
