@@ -4,7 +4,7 @@ cms_exclude: true
 #url: talk
 
 # View
-view: community/card1
+view: views/community/card1/
 
 # Optional cover image (relative to `assets/media/` folder).
 image:
