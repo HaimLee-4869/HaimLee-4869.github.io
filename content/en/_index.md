@@ -93,5 +93,21 @@ sections:
           image:
             filename: mainslider/kokoro.jpg 
 
+  - block: collection
+    content:
+      id: section-1
+      title: Project
+      subtitle:
+      text:
+      count: 3
+      offset: 0
+      order: desc
+      filters:
+        folders:
+          - linux
+    design:
+      view: community/custom_card
+      columns: '2'
+
 
 ---
