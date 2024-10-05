@@ -34,8 +34,8 @@ main:
     weight: 30
 
   - parent: Projects
-    name: Subproject
-    url: subproject/
+    name: Linux
+    url: linux/
     weight: 35
 
 

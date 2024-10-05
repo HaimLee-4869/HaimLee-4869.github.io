@@ -1,10 +1,10 @@
 ---
-title: Subproject
+title: Linux project
 type: landing
 
 sections:
   - block: markdown
     content:
-      title: 'subproject test'
+      title: 'linux project test'
 
 ---
