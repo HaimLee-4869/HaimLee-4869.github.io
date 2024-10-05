@@ -7,4 +7,4 @@ Linux short
 
 <!--more-->
 <div style="text-align: justify;">
-Linux longlong</div>
+Linux longlong.</div>

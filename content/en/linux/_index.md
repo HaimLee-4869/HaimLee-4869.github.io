@@ -2,6 +2,6 @@
 title: linux
 
 # Listing view
-view: community/card
+view: communityy/custom_card
 
 ---
