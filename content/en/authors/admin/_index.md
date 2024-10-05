@@ -115,7 +115,7 @@ languages:
     percent: 80
   - name: Japanese
     percent: 50
-
+ 
 ---
 
 ## About Me

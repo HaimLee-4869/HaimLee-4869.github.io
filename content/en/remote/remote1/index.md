@@ -1,9 +1,14 @@
 ---
 title: Remote Data project
 
-summary: data analysis program
+summary: data analysis program 
 
 abstract: Remote Internship is a program in which students from local national universities undergo learning and evaluation for the purpose of training CDS (Citizen Data Scientists), and then carry out a project based on mentoring that allows selected students to gain relevant job experience. I learned data analysis through a remote internship and am currently working on a team project on the topic of 'food desertification'.
+
+text: |-
+        <div style="text-align: justify;">
+        data analysis about food desertification
+        </div>
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.

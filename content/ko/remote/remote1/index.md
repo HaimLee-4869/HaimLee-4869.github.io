@@ -5,6 +5,11 @@ summary: 데이터 분석 프로그램
 
 abstract: 리모트인턴십은 지역거점국립대 학생들 대상으로한 CDS(Citizen Data Scientist) 양성이 목적인 프로그램입니다. 학습 및 평가 과정을 거쳐서 선발된 학생들에게는 관련 직무 경험을 쌓을 수 있도록 멘토링 기반의 프로젝트를 진행합니다. 리모트 인턴십을 통해 데이터 분석을 배웠고, 현재 '식품 사막화'를 주제로 팀 프로젝트를 진행하고 있습니다.  
 
+text: |-
+        <div style="text-align: justify;">
+        식품 사막화에 대한 데이터 분석
+        </div>
+
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
 date: '2024-03-01T13:00:00Z'

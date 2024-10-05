@@ -16,7 +16,7 @@ status:
 
 # Is this the primary user of the site?
 superuser: true
-
+ 
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 
@@ -120,5 +120,6 @@ languages:
 
 ## About Me
 
-
+<div style="text-align: justify;">
 저(이은정)는 전북대학교 컴퓨터공학부 학부생입니다. 저의 관심 분야는 데이터 과학, 데이터베이스, 컴퓨터 네트워크 및 정보검색입니다. 이번 학기에는 웹서비스설계, 시스템보안, 컴퓨터 그래픽스를 수강하고 있습니다. 최근에는 데이터 분석에 중점적으로 관심을 갖고 CCTV 영상 분류 모델 개발, 청각장애인을 위한 소리 분류 모델 개발, AI 모델을 활용한 철근 단가 예측 등의 프로젝트를 진행하였습니다. 
+</div>
