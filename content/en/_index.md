@@ -68,7 +68,7 @@ sections:
   - block: collection
     id: news
     content:
-      title: Recent News
+      title: News about my hobby
       filters:
         folders:
           - post
