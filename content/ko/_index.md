@@ -41,7 +41,7 @@ sections:
   - block: collection
     id: works
     content:
-      title: My projects
+      title: 프로젝트
       filters:
         folders:
           - publication
@@ -53,7 +53,7 @@ sections:
   - block: collection
     id: talks
     content:
-      title: Talk about Extracurricular Activities
+      title: 대외활동 talk
       filters:
         folders:
           - event
@@ -64,7 +64,7 @@ sections:
   - block: collection
     id: news
     content:
-      title: News about my hobby
+      title: 취미 소식
       filters:
         folders:
           - post
@@ -74,7 +74,7 @@ sections:
 
   - block: community/slider
     content:
-      title: Reading
+      title: 독서
       slides:
       - background: 
           content: 마음사전, 김소연
@@ -92,7 +92,7 @@ sections:
   - block: collection
     content:
       id: section-1
-      title: Project
+      title: 프로젝트 정리
       subtitle:
       text:
       count: 3
