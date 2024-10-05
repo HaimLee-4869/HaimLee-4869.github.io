@@ -1,0 +1,163 @@
+{{ $block := .wcBlock }}
+{{ $title := $block.content.title}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Image Slider</title>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .slider {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .slider-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the slider area */
+            display: block;
+        }
+        .overlay-text {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.05);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        .nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            color: transparent;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav span {
+            cursor: pointer;
+            padding: 10px;
+            user-select: none;
+        }
+        .nav span:hover {
+            color: rgba(0, 0, 0, 0.7);
+            transition: 500ms;
+        }
+        .dots {
+            text-align: center;
+            position: absolute;
+            bottom: 15px;
+            width: 100%;
+        }
+        .dot {
+            cursor: pointer;
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6">
+        <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+            {{ $title }}
+        </div>
+    
+        <div class="slider">
+            <div class="slider-container">
+                {{ range $index, $slide := $block.content.slides }}
+                    <div class="slide">
+                        {{ $img := "" }}
+                        {{ with $slide.background.image.filename }}
+                        {{- $img = resources.Get (path.Join "media" .) -}}
+                        {{ if $img }}
+                            {{- $img = $img.Process "webp" -}}
+                            <img src="{{$img.RelPermalink}}">
+                        {{ end }}
+                        {{ end }}
+                        <div class="overlay-text">{{ $slide.background.content }}</div>
+                    </div>
+                {{ end }}
+            </div>
+            <div class="nav">
+                <span id="prev">&#10094;</span>
+                <span id="next">&#10095;</span>
+            </div>
+            <div class="dots">
+                {{ range $index, $slide := $block.content.slides }}
+                    <span class="dot" onclick="currentSlide({{ $index }})"></span>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+
+<script>
+    const sliderContainer = document.querySelector('.slider-container');
+    const slides = document.querySelectorAll('.slide');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+    const dots = document.querySelectorAll('.dot');
+    let index = 0;
+
+    function showSlide(i) {
+        index += i;
+        if (index >= slides.length) index = 0;
+        if (index < 0) index = slides.length - 1;
+        sliderContainer.style.transform = `translateX(${-index * 100}%)`;
+        updateDots();
+    }
+
+    function currentSlide(i) {
+        index = i;
+        sliderContainer.style.transform = `translateX(${-index * 100}%)`;
+        updateDots();
+    }
+
+    function updateDots() {
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[index].classList.add('active');
+    }
+
+    prev.addEventListener('click', () => showSlide(-1));
+    next.addEventListener('click', () => showSlide(1));
+
+    setInterval(() => showSlide(1), 5000); // Auto slide every 5 seconds
+</script>
+
+</body>
+</html>
