@@ -1,7 +1,10 @@
 ---
-title: linux
+title: Linux project
 
-# Listing view
-view: community/custom_compact.html
+view: community/card
+
+banner:
+  caption: 'Image credit: [**Unsplash**](https://unsplash.com/)'
+  image: 'linuxx.jpg'
 
 ---
