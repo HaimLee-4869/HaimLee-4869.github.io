@@ -12,13 +12,9 @@ sections:
     design:
       view: community/card1
       columns: 1
-
+      cards:
+        - image: 
+            src: "linux/featured.jpg" 
+          title: "Linux Programming kiosk program"
+          content: "longlonglonglong linux descript"
 ---
-
----
-
-Linux Programming kiosk program
-
-<!--more-->
-<div style="text-align: justify;">
-longlonglonglong linux descript </div>
