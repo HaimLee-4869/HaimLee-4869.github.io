@@ -1,6 +1,8 @@
 # [Eunjung's Blog(HUGO)](https://haimlee-4869.github.io/)
 
-[![Screenshot](.github/preview.webp)](https://hugoblox.com/templates/)
+위 링크로 들어오세요!
+
+&nbsp;
 
 </div>
 <div align="center">
