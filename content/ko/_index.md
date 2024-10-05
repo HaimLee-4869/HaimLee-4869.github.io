@@ -74,6 +74,44 @@ sections:
       view: article-grid
       columns: 3
 
+
+  - block: slider
+    content:
+      slides:
+      - title: <span style="font-size:90%">Welcome!</span>
+        content: <span style="font-size:90%">Eunjung's blog<span style="font-size:90%">
+        align: center
+        background:
+          image:
+            filename: ian-talmacs-vieCCGMtrx0-unsplash.jpg
+            filters:
+              brightness: 0.4
+          position: center
+          color: '#000'
+
+      - title: <span style="font-size:90%">DATA</span>
+        content: <span style="font-size:90%">I am interested in data</span>
+        align: center
+        background:
+          image:
+            filename: joshua-sortino-LqKhnDzSF-8-unsplash.jpg
+            filters:
+              brightness: 0.4
+          position: center
+          color: '#000'
+
+      - title: <span style="font-size:90%">My Favorite</span>
+        content: <span style="font-size:90%">Check out my hobbies on the blog!</span>
+        align: center
+        background:
+          image:
+            filename: leo-rivas-wtxcaDIdOCM-unsplash.jpg
+            filters:
+              brightness: 0.4
+          position: center
+          color: '#000'
+
+
   - block: community/slider
     content:
       title: 독서
