@@ -2,98 +2,12 @@
 #   Create a section for each of your site's languages.
 #   Documentation: https://docs.hugoblox.com/reference/language/
 
-# Default language
-en:
-  languageCode: en-us
-  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
-  contentDir: content/en
-  weight: 2
-  description: Eunjung's Website!
-  menu:
-  main:
-  - name: Bio
-    url: /en
-    weight: 10
-
-
-  - name: Works
-    url: /en/#works
-    weight: 11
-
-
-  - name: Talks
-    url: /en/#talks
-    weight: 12
-
-
-  - name: News
-    url: /en/#news
-    weight: 13
-
-
-  - name: Experience
-    url: /en/experience/
-    weight: 20
-
-
-  - name: Projects
-    url: /en/projects/
-    weight: 30
-
-
-  - name: Teaching
-    url: /en/teaching/
-    weight: 40
-
-  - name: Contact
-    url: /en/contact/
-    weight: 50
-
 # Uncomment the lines below to configure your website in a second language.
 ko: 
   languageCode: ko
   contentDir: content/ko
   weight: 1
-  description: 은정이 홈페이지
-  menu:
-  main:
-  - name: 프로필
-    url: /ko
-    weight: 10
 
-
-  - name: 워크
-    url: /ko/#works
-    weight: 11
-
-
-  - name: 토크
-    url: /ko/#talks
-    weight: 12
-
-
-  - name: 뉴스
-    url: /ko/#news
-    weight: 13
-
-
-  - name: 경험
-    url: /ko/experience/
-    weight: 20
-
-
-  - name: 프로젝트
-    url: /ko/projects/
-    weight: 30
-
-
-  - name: 티칭
-    url: /ko/teaching/
-    weight: 40
-
-  - name: 연락
-    url: /ko/contact/
-    weight: 50    
 
 #  title: Chinese website title...
 #  params:
@@ -103,3 +17,12 @@ ko:
 #      - name: 传
 #        url: '#about'
 #        weight: 1
+
+
+# Default language
+en:
+  languageName: English
+  languageCode: en-us
+  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
+  contentDir: content/en
+  weight: 3
