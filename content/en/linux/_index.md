@@ -2,6 +2,6 @@
 title: linux
 
 # Listing view
-view: community/custom_card.html
+view: community/custom_compact.html
 
 ---
