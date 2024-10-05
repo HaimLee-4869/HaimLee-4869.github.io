@@ -108,7 +108,7 @@ sections:
           - java
           - remote
     design:
-      view: community/custom_card.html
+      view: community/custom_card
       columns: '1'
 
 ---
