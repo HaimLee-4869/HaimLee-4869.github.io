@@ -2,6 +2,6 @@
 title: linux
 
 # Listing view
-view: community/card1
+view: community/card
 
 ---
