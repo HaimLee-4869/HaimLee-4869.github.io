@@ -62,3 +62,15 @@ features:
     provider: 'mapnik'
     api_key: ' '
   zoom: 15
+
+
+
+sharing_image: "icon.png"
+
+og:
+  title: '전북대학교 이은정'
+  type: 'website'
+  url: 'https://haimlee-4869.github.io/'
+  image: '/media/icon.png'
+  site_name: 'EunjungLee'
+  description: '전북대학교 이은정 블로그'
