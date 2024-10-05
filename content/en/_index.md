@@ -109,6 +109,6 @@ sections:
           - remote
     design:
       view: community/custom_card.html
-      columns: '2'
+      columns: '1'
 
 ---
