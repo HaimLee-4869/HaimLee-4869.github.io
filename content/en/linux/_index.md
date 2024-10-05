@@ -1,24 +1,7 @@
 ---
-widget: linux
-headless: true
-weight: 20
-title: '**Learning Hub**'
-subtitle: ''
+title: linux
 
-content:
-  page_type: project
-  filter_default: 0
-  filter_button:
-    - name: All
-      tag: '*'
+# Listing view
+view: community/card1
 
-design:
-  columns: '1'
-  view: card1
-  flip_alt_rows: false
-  background: {}
-  spacing: {padding: [0, 0, "120px", 0]}
-
-  view_options:
-    card_view_layout: custom
 ---
