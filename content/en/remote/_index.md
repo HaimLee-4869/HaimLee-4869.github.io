@@ -1,10 +1,9 @@
 ---
-title: Remote data project
-type: landing
+title: JAVA project
 
-sections:
-  - block: markdown
-    content:
-      title: 'remote data project test'
+view: community/custom_card
 
+banner:
+  caption: 'Image credit: [**Unsplash**](https://unsplash.com/)'
+  image: 'dataa.jpg'
 ---
