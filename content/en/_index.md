@@ -64,7 +64,6 @@ sections:
     design:
       view: article-grid
       columns: 3
-
 - block: collection
     id: news
     content:
