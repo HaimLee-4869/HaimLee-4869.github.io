@@ -1,20 +1,13 @@
 ---
-title: Linux project
-type: landing
+title: Recent & Upcoming Talks
+cms_exclude: true
+#url: talk
 
-sections:
-  - block: markdown
-    content:
-      title: 'linux project test'
-      filters:
-        folders:
-          - linux
-    design:
-      view: grid
-      columns: 1
-      cards:
-        - image: 
-            src: /uploads/linux.jpg
-          title: Linux Programming kiosk program
-          content: longlonglonglong linux descript
----
+# View
+view: community/card1
+
+# Optional cover image (relative to `assets/media/` folder).
+image:
+  caption: ''
+  filename: ''
+--- 
