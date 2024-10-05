@@ -77,8 +77,8 @@ sections:
   - block: slider
     content:
       slides:
-      - title: <span style="font-size:90%">Welcome!</span>
-        content: <span style="font-size:90%">Eunjung's blog<span style="font-size:90%">
+      - title: Welcome!
+        content: ''
         align: center
         background:
           image:
@@ -86,11 +86,10 @@ sections:
             filters:
               brightness: 0.4
           position: center
-          color: '#000'
+          color: "#666"
 
-      - title: <span style="font-size:90%">DATA</span>
-
-        content: <span style="font-size:90%">I am interested in data</span>
+      - title: DATA
+        content: ''
         align: center
         background:
           image:
@@ -98,10 +97,10 @@ sections:
             filters:
               brightness: 0.4
           position: center
-          color: '#000'
+          color: "#555"
 
-      - title: <span style="font-size:90%">My Favorite</span>
-        content: <span style="font-size:90%">Check out my hobbies on the blog!</span>
+      - title: My Favorite
+        content: ''
         align: center
         background:
           image:
@@ -109,7 +108,7 @@ sections:
             filters:
               brightness: 0.4
           position: center
-          color: '#000'
+          color: "#333"
 
     design:
       # Slide height is automatic unless you force a specific height (e.g. '400px')

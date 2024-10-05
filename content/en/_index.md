@@ -76,7 +76,7 @@ sections:
     content:
       slides:
       - title: Welcome!
-        content: "Eunjung's blog"
+        content: ''
         align: center
         background:
           image:
@@ -87,7 +87,7 @@ sections:
           color: "#666"
 
       - title: DATA
-        content: "I am interested in data"
+        content: ''
         align: center
         background:
           image:
@@ -98,7 +98,7 @@ sections:
           color: "#555"
 
       - title: My Favorite
-        content: "Check out my hobbies on the blog!"
+        content: ''
         align: center
         background:
           image:
