@@ -43,6 +43,11 @@ main:
     url: java/
     weight: 36
 
+  - parent: Projects
+    name: Remote
+    url: remote/
+    weight: 37
+
 
   - name: Teaching
     url: teaching/
