@@ -138,13 +138,13 @@
         index += i;
         if (index >= slides.length) index = 0;
         if (index < 0) index = slides.length - 1;
-        sliderContainer.style.transform = translateX(${-index * 100}%);
+        sliderContainer.style.transform = `translateX(${-index * 100}%)`;
         updateDots();
     }
 
     function currentSlide(i) {
         index = i;
-        sliderContainer.style.transform = translateX(${-index * 100}%);
+        sliderContainer.style.transform = `translateX(${-index * 100}%)`;
         updateDots();
     }
 
