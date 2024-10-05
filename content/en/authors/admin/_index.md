@@ -120,4 +120,4 @@ languages:
 
 ## About Me
 
-Eunjung_Lee is an undergraduate student in Computer Science&Engineering at JBNU. Her areas of interest include Data Science, DataBase, Computer Network, and Information Retrieval. She is studying Web Service Design, System Security, and Computer Graphics this semester.
+Eunjung_Lee is an undergraduate student in Computer Science&Engineering at JBNU. Her areas of interest include Data Science, DataBase, Computer Network, and Information Retrieval. She is studying Web Service Design, System Security, and Computer Graphics this semester. Recently, I have been interested in data analysis and have carried out projects such as developing a CCTV image classification model, developing a sound classification model for the hearing impaired, and predicting the unit price of rebar using an AI model.

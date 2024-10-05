@@ -8,7 +8,7 @@ sections:
       title: contact
       text: |-
         <div style="text-align: justify;">
-        If you have Question plz dm me
+        If you have any questions, please contact me!
 
         - E-mail: j_haim4869(at)naver.com
         - Phone-number: 010-6379-7336

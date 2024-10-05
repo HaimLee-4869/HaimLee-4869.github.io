@@ -4,18 +4,18 @@ title: Remote Internship
 host: CJXHANKYUNGXFirb
 host_url: https://www.instagram.com/remote_internship/
 
-summary: remote short
+summary: data analysis program
 
-abstract: remote internship long
+abstract: Remote Internship is a program in which students from local national universities undergo learning and evaluation for the purpose of training CDS (Citizen Data Scientists), and then carry out a project based on mentoring that allows selected students to gain relevant job experience. I learned data analysis through a remote internship and am currently working on a team project on the topic of 'food desertification'.
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: '2030-06-01T13:00:00Z'
-date_end: '2030-06-01T15:00:00Z'
+date: '2024-04-01T13:00:00Z'
+date_end: '2024-12-15T15:00:00Z'
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: '2017-01-01T00:00:00Z'
+publishDate: '2024-10-05T00:00:00Z'
 
 authors:
   - admin
@@ -34,7 +34,7 @@ image:
 #    icon_pack: fab
 #    name: Follow
 #    url: https://twitter.com/georgecushen
-url_code: 'https://github.com/HaimLee-4869'
+url_code: 'https://www.instagram.com/remote_internship/'
 
 
 # Markdown Slides (optional).
@@ -52,15 +52,3 @@ slides: ""
 projects:
   - example
 ---
-
-{{% callout note %}}
-Click on the **Slides** button above to view the built-in slides feature.
-{{% /callout %}}
-
-Slides can be added in a few ways:
-
-- **Create** slides using Hugo Blox Builder's [_Slides_](https://docs.hugoblox.com/reference/content-types/) feature and link using `slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://docs.hugoblox.com/reference/markdown/).
-
-Further event details, including [page elements](https://docs.hugoblox.com/reference/markdown/) such as image galleries, can be added to the body of this page.

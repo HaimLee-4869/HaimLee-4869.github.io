@@ -4,18 +4,18 @@ title: SAMSUNG DREAM CLASS
 host: SAMSUNG
 host_url: https://www.dreamclass.org/index.do
 
-summary: samsung dream class short
+summary: I am doing educational outreach to middle school students.
 
-abstract: SAMSUNGDREAMCLASS long long
+abstract: Samsung Dream Class is a youth education program in which college students serve as mentors to middle school students who lack educational resources and support their learning. To prevent insufficient conditions from becoming a gap between dreams, we have introduced an online/offline hybrid education system and provide not only basic learning, but also career and vocational education to form career aspirations, and future competency education that will become basic knowledge in the era of the 4th Industrial Revolution. I am mentoring 6 children at the INHU Youth Center in Jeonju.
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: '2030-06-01T13:00:00Z'
-date_end: '2030-06-01T15:00:00Z'
+date: '2024-08-01T13:00:00Z'
+date_end: '2025-02-28T15:00:00Z'
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: '2017-01-01T00:00:00Z'
+publishDate: '2024-10-05T00:00:00Z'
 
 authors:
   - admin
@@ -52,15 +52,3 @@ slides: ""
 projects:
   - example
 ---
-
-{{% callout note %}}
-Click on the **Slides** button above to view the built-in slides feature.
-{{% /callout %}}
-
-Slides can be added in a few ways:
-
-- **Create** slides using Hugo Blox Builder's [_Slides_](https://docs.hugoblox.com/reference/content-types/) feature and link using `slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://docs.hugoblox.com/reference/markdown/).
-
-Further event details, including [page elements](https://docs.hugoblox.com/reference/markdown/) such as image galleries, can be added to the body of this page.

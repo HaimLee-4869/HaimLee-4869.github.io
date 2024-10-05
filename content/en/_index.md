@@ -57,7 +57,7 @@ sections:
   - block: collection
     id: talks
     content:
-      title: Extracurricular Activities
+      title: Talk about Extracurricular Activities
       filters:
         folders:
           - event
