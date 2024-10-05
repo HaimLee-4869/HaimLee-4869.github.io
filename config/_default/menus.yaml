@@ -38,6 +38,11 @@ main:
     url: linux/
     weight: 35
 
+  - parent: Projects
+    name: Java
+    url: java/
+    weight: 36
+
 
   - name: Teaching
     url: teaching/
