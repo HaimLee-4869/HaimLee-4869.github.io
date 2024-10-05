@@ -14,7 +14,7 @@ sections:
       columns: 1
       cards:
         - image: 
-            src: "linux/featured.jpg" 
-          title: "Linux Programming kiosk program"
-          content: "longlonglonglong linux descript"
+            src: linux/featured.jpg
+          title: Linux Programming kiosk program
+          content: longlonglonglong linux descript
 ---
