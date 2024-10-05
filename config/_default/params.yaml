@@ -15,6 +15,8 @@ marketing:
     local_business_type: ''
     org_name: '전북대학교 이은정'
     description: '전북대학교 이은정 블로그'
+    keywords: "전북대, 이은정, 전북대 이은정"
+    author: "이은정"
     twitter: 'GetResearchDev'
   analytics:
     google_analytics: ''
@@ -62,6 +64,8 @@ features:
     provider: 'mapnik'
     api_key: ' '
   zoom: 15
+
+
 
 
 

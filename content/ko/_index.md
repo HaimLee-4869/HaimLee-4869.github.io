@@ -1,6 +1,8 @@
 ---
 # Leave the homepage title empty to use the site title
-title: ""
+title: "전북대 이은정"
+description: "전북대 이은정"
+keywords: "전북대, 이은정, 전북대 이은정"
 date: 2022-10-24
 type: landing
 
