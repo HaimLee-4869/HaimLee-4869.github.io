@@ -74,52 +74,6 @@ sections:
       view: article-grid
       columns: 3
 
-  - block: slider
-    content:
-      slides:
-      - title: Welcome!
-        content: ''
-        align: center
-        background:
-          image:
-            filename: ian-talmacs-vieCCGMtrx0-unsplash.jpg
-            filters:
-              brightness: 0.4
-          position: center
-          color: "#666"
-
-      - title: DATA
-        content: ''
-        align: center
-        background:
-          image:
-            filename: joshua-sortino-LqKhnDzSF-8-unsplash.jpg
-            filters:
-              brightness: 0.4
-          position: center
-          color: "#555"
-
-      - title: My Favorite
-        content: ''
-        align: center
-        background:
-          image:
-            filename: leo-rivas-wtxcaDIdOCM-unsplash.jpg
-            filters:
-              brightness: 0.4
-          position: center
-          color: "#333"
-
-    design:
-      # Slide height is automatic unless you force a specific height (e.g. '400px')
-      slide_height: '350px'
-      slide_width: '100px'
-      is_fullscreen: false
-      # Automatically transition through slides?
-      loop: true
-      # Duration of transition between slides (in ms)
-      interval: 3000
-
 
   - block: community/slider
     content:
