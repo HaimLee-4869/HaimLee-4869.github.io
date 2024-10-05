@@ -64,7 +64,8 @@ sections:
     design:
       view: article-grid
       columns: 3
-- block: collection
+
+  - block: collection
     id: news
     content:
       title: Recent News
