@@ -74,7 +74,6 @@ sections:
       view: article-grid
       columns: 3
 
-
   - block: slider
     content:
       slides:
@@ -90,6 +89,7 @@ sections:
           color: '#000'
 
       - title: <span style="font-size:90%">DATA</span>
+
         content: <span style="font-size:90%">I am interested in data</span>
         align: center
         background:
@@ -110,6 +110,16 @@ sections:
               brightness: 0.4
           position: center
           color: '#000'
+
+    design:
+      # Slide height is automatic unless you force a specific height (e.g. '400px')
+      slide_height: '350px'
+      slide_width: '100px'
+      is_fullscreen: false
+      # Automatically transition through slides?
+      loop: true
+      # Duration of transition between slides (in ms)
+      interval: 3000
 
 
   - block: community/slider
