@@ -1,12 +1,8 @@
-<div style="text-align: center; margin: 20px 0;">
-  <img src="ian-talmacs-vieCCGMtrx0-unsplash.jpg" style="width: 100%; max-width: 1000px; height: auto;">
- </div>
-
 ---
 title: contact
 type: landing
 
-
+<img src="ian-talmacs-vieCCGMtrx0-unsplash.jpg" style="width: 100%; max-width: 1000px; height: auto;">
 
 sections:
 
