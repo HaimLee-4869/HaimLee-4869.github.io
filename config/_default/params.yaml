@@ -38,6 +38,7 @@ header:
     show_theme_chooser: true
     logo:
       text: "Eunjung Lee"
+      filename: "icon.png"
 
 # Site footer
 footer:
