@@ -45,7 +45,7 @@ profiles:
     icon_pack: fab
     url: https://github.com/HaimLee-4869
 
-  - icon: music
+  - icon: heart
     icon_pack: fas
     url: https://www.youtube.com/@%EC%9D%B4%EC%91%9D-l1z/community
 
