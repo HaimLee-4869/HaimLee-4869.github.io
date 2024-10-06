@@ -9,7 +9,6 @@ sections:
     content:
       title: contact
       text: |-
-      ![Main Image](ian-talmacs-vieCCGMtrx0-unsplash.jpg)
         <div style="text-align: justify;">
         문의사항이 있으시면 언제든지 연락주세요!
 
