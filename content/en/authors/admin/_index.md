@@ -33,12 +33,31 @@ organizations:
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
+    icon_pack: fab
     url: 'mailto:j_haim4869@naver.com'
     label: E-mail Me
+
   - icon: brands/instagram
+    icon_pack: fab
     url: https://www.instagram.com/03.08.06_/
+
   - icon: brands/github
+    icon_pack: fab
     url: https://github.com/HaimLee-4869
+
+  - icon: youtube
+    icon_pack: fab
+    url: https://www.youtube.com/@%EC%9D%B4%EC%91%9D-l1z/community
+
+  - icon: discord
+    icon_pack: fab
+    url: https://discord.com/channels/1281105043134746749/1281105043134746754
+
+  - icon: rss
+    icon_pack: fas
+    link: https://connect.mysuni.com/suni-main/auth/login?contentUrl=/suni-community/community/COMMUNITY-1g/home?cineroomId=ne2-m7-c20&contentUrl=
+
+
 
 
 interests:
