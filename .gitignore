@@ -1,0 +1,13 @@
+# Hugo 빌드 결과물 (GitHub Actions가 빌드함)
+public/
+resources/
+.hugo_build.lock
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 에디터
+.vscode/
+.idea/
+*.swp

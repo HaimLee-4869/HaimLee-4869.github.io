@@ -1,0 +1,130 @@
+{{ define "main" }}
+<section class="project-detail" style="padding-top: 100px; padding-bottom: 60px;">
+  <div class="container" style="max-width: 860px;">
+    
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="detail-breadcrumb mb-4">
+      <a href="{{ "/" | absURL }}">Home</a>
+      <span class="sep">›</span>
+      <a href="{{ "/projects/" | absURL }}">Projects</a>
+      <span class="sep">›</span>
+      <span class="current">{{ .Title }}</span>
+    </nav>
+    
+    <!-- 상단 뒤로가기 -->
+    <a href="{{ "/projects/" | absURL }}" class="back-link mb-3 d-inline-block">← 목록으로</a>
+    
+    <!-- 역할 + 기술스택 -->
+    <div class="detail-meta mb-3">
+      {{ with .Params.roles }}
+      <span class="role-badge-detail">{{ . }}</span>
+      {{ end }}
+      {{ with .Params.badges }}
+      {{ range . }}
+      <span class="badge me-1">{{ . }}</span>
+      {{ end }}
+      {{ end }}
+    </div>
+    
+    <!-- 제목 -->
+    <h1 class="detail-title mb-4">{{ .Title }}</h1>
+    
+    <!-- 대표 이미지 -->
+    {{ with .Params.image }}
+    <div class="detail-hero-image mb-5">
+      <img src="{{ . | absURL }}" alt="">
+    </div>
+    {{ end }}
+    
+    <!-- 본문 -->
+    <div class="detail-content">
+      {{ .Content }}
+    </div>
+    
+    <!-- 핑크 divider -->
+    <hr class="pink-divider my-5">
+    
+    <!-- 링크 섹션 + 임베드 미리보기 -->
+    {{ $links := .Params.links }}
+    {{ if $links }}
+      {{ $live := index $links "live" }}
+      {{ $gh := index $links "github" }}
+      {{ $pdf := index $links "pdf" }}
+      {{ $news := index $links "news" }}
+      {{ if or $live $gh $pdf $news }}
+      <div class="detail-links mb-4">
+        <h3 class="h6 mb-3">관련 링크</h3>
+        <div class="d-flex flex-wrap gap-2">
+          {{ if $live }}<a href="{{ $live }}" target="_blank" rel="noopener" class="link-btn-large">🔗 Live Site</a>{{ end }}
+          {{ if $gh }}<a href="{{ $gh }}" target="_blank" rel="noopener" class="link-btn-large">⚡ GitHub</a>{{ end }}
+          {{ if $pdf }}<a href="{{ $pdf }}" target="_blank" rel="noopener" class="link-btn-large">📄 발표자료</a>{{ end }}
+          {{ if $news }}<a href="{{ $news }}" target="_blank" rel="noopener" class="link-btn-large">📰 언론보도</a>{{ end }}
+        </div>
+      </div>
+
+      <!-- 🎬 자동 임베드 미리보기 -->
+      
+      <!-- 1. Live Site iframe 임베드 -->
+      {{ if $live }}
+      <div class="embed-preview">
+        <div class="embed-preview-label">🔗 Live Site 미리보기</div>
+        <iframe src="{{ $live }}" loading="lazy" sandbox="allow-scripts allow-same-origin allow-popups" referrerpolicy="no-referrer"></iframe>
+      </div>
+      {{ end }}
+      
+      <!-- 2. News - YouTube면 임베드 (정규식 추출) -->
+      {{ if $news }}
+        {{ $isYoutube := or (in $news "youtube.com") (in $news "youtu.be") }}
+        {{ if $isYoutube }}
+          {{ $videoId := "" }}
+          {{ $startTime := "" }}
+          
+          {{/* video ID 추출 - 정규식으로 watch?v=, live/, embed/, youtu.be/ 모두 매칭 */}}
+          {{ $videoMatches := findRESubmatch `(?:youtube\.com/(?:watch\?v=|live/|embed/|shorts/)|youtu\.be/)([\w-]+)` $news }}
+          {{ if $videoMatches }}
+            {{ $videoId = index (index $videoMatches 0) 1 }}
+          {{ end }}
+          
+          {{/* timestamp 추출 - ?t=숫자 또는 &t=숫자 */}}
+          {{ $timeMatches := findRESubmatch `[?&]t=(\d+)` $news }}
+          {{ if $timeMatches }}
+            {{ $startTime = index (index $timeMatches 0) 1 }}
+          {{ end }}
+          
+          {{ if $videoId }}
+          <div class="embed-preview youtube">
+            <div class="embed-preview-label">📰 YouTube 영상{{ if $startTime }} ({{ $startTime }}초부터 재생){{ end }}</div>
+            <iframe 
+              src="https://www.youtube.com/embed/{{ $videoId }}{{ if $startTime }}?start={{ $startTime }}{{ end }}" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen 
+              loading="lazy"></iframe>
+          </div>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      
+      <!-- 3. PDF 임베드 -->
+      {{ if $pdf }}
+        {{ if hasSuffix $pdf ".pdf" }}
+        <div class="embed-preview">
+          <div class="embed-preview-label">📄 발표자료 미리보기</div>
+          <embed src="{{ $pdf }}" type="application/pdf">
+        </div>
+        {{ end }}
+      {{ end }}
+      
+      <!-- 핑크 divider -->
+      <hr class="pink-divider my-5">
+      {{ end }}
+    {{ end }}
+    
+    <!-- 하단 뒤로가기 -->
+    <div class="text-center">
+      <a href="{{ "/projects/" | absURL }}" class="back-btn-bottom">← Projects 목록으로 돌아가기</a>
+    </div>
+    
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,13 @@
+/* Hero 고양이 우주비행사 둥둥 떠다니는 애니메이션 */
+#hero .image img {
+  animation: floatCat 3.5s ease-in-out infinite !important;
+}
+
+@keyframes floatCat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}

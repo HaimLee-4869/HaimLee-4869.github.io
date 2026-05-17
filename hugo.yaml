@@ -1,0 +1,423 @@
+baseURL: "https://haimlee-4869.github.io/"
+locale: "en-us"
+title: "EUNJUNG LEE"
+theme: hugo-profile
+
+defaultContentLanguage: "en"
+languages:
+  en:
+    label: "English"
+    weight: 1
+    contentDir: "content"
+    menu:
+      main:
+        - identifier: projects
+          name: Projects
+          title: All projects
+          url: /projects/
+          weight: 5
+        - identifier: awards
+          name: Awards
+          title: All awards
+          url: /awards/
+          weight: 6
+        - identifier: activities
+          name: Activities
+          title: Extracurricular activities
+          url: /activities/
+          weight: 7
+        - identifier: blog
+          name: Blog
+          title: Blog posts
+          url: /blogs
+          weight: 8
+        - identifier: gallery
+          name: Gallery
+          title: Image gallery
+          url: /gallery
+          weight: 9
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+enableRobotsTXT: true
+pagination:
+  pagerSize: 3
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  title: "EUNJUNG LEE"
+  description: "EUNJUNG LEE's personal portfolio"
+  favicon: "/fav.png"
+
+  useBootstrapCDN: false
+  mathjax: false
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "light"
+
+  font:
+    fontSize: 1rem
+    fontWeight: 400
+    lineHeight: 1.5
+    textAlign: left
+
+  # color preference
+  color:
+    textColor: "#1a1a1a"
+    secondaryTextColor: "#6b6b6b"
+    textLinkColor: "#e879a3"
+    backgroundColor: "#ffffff"
+    secondaryBackgroundColor: "#fff0f5"
+    primaryColor: "#f4a4c4"
+    secondaryColor: "#f4f4f4"
+
+    darkmode:
+      textColor: "#e8e8e8"
+      secondaryTextColor: "#b0b3b8"
+      textLinkColor: "#f4a4c4"
+      backgroundColor: "#1a1a1a"
+      secondaryBackgroundColor: "#2a1f24"
+      primaryColor: "#f4a4c4"
+      secondaryColor: "#212529"
+
+  navbar:
+    align: ms-auto
+    brandName: "EUNJUNG LEE"
+    disableSearch: false
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: false
+    enableSeparator: false
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: true
+      disableAchievements: true
+      disableContact: false
+
+  # Hero — 첫 화면
+  hero:
+    enable: true
+    intro: "Hi, I'm"
+    title: "EUNJUNG LEE."
+    subtitle: "I build things for the web"
+    content: "전북대학교 컴퓨터공학부 4학년. 데이터로 사회를 읽고, 코드로 작은 변화를 만드는 것을 좋아합니다."
+    image: /images/hero-cat.svg
+    bottomImage:
+      enable: true
+    button:
+      enable: true
+      name: "Resume"
+      url: "#"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/HaimLee-4869
+        - icon: fab fa-linkedin
+          url: https://linkedin.com
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/profile.jpg"
+    content: |-
+      무엇을 만들지보다 왜 만들어야 하는지를 먼저 묻는 개발자입니다. 전북대 AI/빅데이터 학회 JBIG 회장으로서 풀스택 서비스를 운영하며 실전 개발 경험을 쌓았고, RAG 기반 AI 에이전트와 CNN+LSTM 앙상블 예측 모델 등 다양한 ML/DL 프로젝트로 11개 대회에서 수상했습니다.
+
+      앞으로는 ML/DL을 활용한 연구를 통해 더 깊은 기술적 깊이를 쌓고 싶습니다.
+    skills:
+      enable: true
+      title: "주로 사용하는 기술 스택입니다."
+      items:
+        - "Python"
+        - "PyTorch"
+        - "TensorFlow"
+        - "Scikit-learn"
+        - "React"
+        - "TypeScript"
+        - "Django"
+        - "PostgreSQL"
+        - "AWS"
+        - "Docker"
+        - "Git"
+
+  # Experience
+  experience:
+    enable: true
+    items:
+      - company: "전북대학교 AI/빅데이터 학회 JBIG"
+        companyUrl: "https://www.jbig.co.kr"
+        jobs:
+          - name: "회장 & 풀스택 개발자"
+            date: "2025 - 현재"
+            content: |-
+              학회 운영진과 함께 한 학기 단위의 ML/DL 커리큘럼을 직접 기획하고, 매주 정기 세미나와 데이콘 코드 리뷰를 운영했습니다.
+
+              **JBIG 홈페이지 풀스택 유지보수 (React/TypeScript + Django REST + PostgreSQL)**
+
+              - 운영 중인 DB를 Supabase로 무중단 마이그레이션
+              - 파일 저장 방식을 Django 로컬에서 NCP Object Storage로 전환, Presigned URL 7단계 업로드로 서버 부하 절감
+              - boto3 ExpiresIn 파라미터의 NCP 특이사항을 직접 실험으로 검증하여 이미지 만료 이슈 해결
+              - Gunicorn/Nginx 배포 설정 및 환경 변수 가이드 문서화
+
+      - company: "CJ올리브네트웍스"
+        companyUrl: "https://www.cjolivenetworks.co.kr"
+        jobs:
+          - name: "데이터 분석 동계 인턴"
+            date: "2024"
+            content: |-
+              여의도 IFC몰에 입점한 5개 CJ 브랜드의 고객 이동 동선을 분석하여 매출 향상 전략을 도출하는 프로젝트를 수행했습니다.
+
+              - Pandas, Matplotlib, Seaborn 등을 활용한 데이터 전처리·시각화·예측 모델 구축 담당
+              - CJ ONE 회원 데이터 분석으로 브랜드 간 교차 방문이 객단가를 약 10% 상승시킨다는 양의 상관관계 확인
+              - 로지스틱 회귀 기반 브랜드 방문 예측 모델 (정확도 약 80%, AUC: CGV 0.94 / 올리브영 0.90)
+              - CGV 씨네샵 리뉴얼·브랜드 콜라보 팝업 등 실질적 매출 향상 방안을 실무진에 발표
+
+      - company: "KT 에이블스쿨"
+        companyUrl: "https://aivle.kt.co.kr"
+        jobs:
+          - name: "AI 트랙 부트캠프 (전북대 지역인재 전형)"
+            date: "2024 - 2025"
+            content: |-
+              웹 개발과 클라우드, AI를 아우르는 6개월 집중 교육 과정을 거쳤습니다.
+
+              - **3관왕 달성**: 우수 수료생 / 우수 기자단 / 빅프로젝트 우수상
+
+  # Education
+  education:
+    enable: true
+    index: false
+    items:
+      - title: "컴퓨터공학부 학사"
+        school:
+          name: "전북대학교"
+          url: "https://www.jbnu.ac.kr"
+        date: "2022 - 현재 (4학년)"
+        content: |-
+          - **AI/빅데이터 학회 JBIG 회장** 역임 (2025 - 현재)
+          - **소프트웨어중심대학사업단** 지역인재 전형 KT 에이블스쿨 선발
+          - 머신러닝/딥러닝, 데이터 분석, 풀스택 웹 개발 전반 학습
+          - 11회 대회 수상 (자세한 내역은 Achievements 섹션 참고)
+
+  # Achievements
+  achievements:
+    enable: true
+    items:
+      - title: "🏆 제주 AWS 글로벌 스페이스 챌린지 해커톤 - 최우수상"
+        image: /images/projects/achievement.svg
+        content: "AWS 공공부문 대표상 / 위성 관측 데이터와 스마트 부표를 융합한 해양 기후 모니터링 솔루션 'SUM:CLIMATE BUOY' (2026)"
+
+      - title: "🏆 2026 지역 창업 솔버톤 대회 - 우수상"
+        image: /images/projects/achievement.svg
+        content: "서울대학교 총장상 / 친환경 부표 '머쉬부이' + 해양 데이터 플랫폼 '섬부이' (서울대·전북대·UNIST·포스텍 등 12개 기관 주관)"
+
+      - title: "🏆 제27회 아이디어 유니버시아드 - 최우수상"
+        image: /images/projects/achievement.svg
+        content: "이데일리 회장상 / 고립·은둔 청년을 위한 AI 직무 역량 평가 플랫폼 (이데일리, KG에듀원 주관)"
+
+      - title: "🏆 2025 전주ICT이노베이션스퀘어 디지털 신기술 아이디어 공모전 - 최우수상"
+        image: /images/projects/achievement.svg
+        content: "전주정보문화산업진흥원장상 / 고령 환자 동행 AI 디바이스 '케어내비' (UWB+WiFi RTT 하이브리드 측위, 가중치 다익스트라)"
+
+      - title: "🥈 2025 전북특별자치도 공공데이터 활용 창업경진대회 - 우수상"
+        image: /images/projects/achievement.svg
+        content: "전북테크노파크원장상 / RAG 기반 지역 가치 발견 플랫폼 'J-Connect' (Random Forest 인구 이동 분석)"
+
+      - title: "🥈 2025 제12회 대한민국 SW융합 해커톤 - 우수상"
+        image: /images/projects/achievement.svg
+        content: "대구광역시장상 / 식품사막 해소를 위한 AI 이동장터 솔루션 'ITDA' (과기정통부, NIPA 주관)"
+
+      - title: "🥈 2025 해운 항만 물류 AX 혁신 아이디어 공모전 - 우수상"
+        image: /images/projects/achievement.svg
+        content: "한국해양진흥공사 사장상 / CNN+LSTM 앙상블 항만 혼잡도 예측 (R² 0.999, MAPE 2.95%)"
+
+      - title: "🥈 2026 제5회 장애·비장애 대학생 창업경진대회 - 우수상"
+        image: /images/projects/achievement.svg
+        content: "한경국립대 총장상 / 뇌병변·지적장애인을 위한 취업 지원 서비스"
+
+      - title: "🥉 K리그-서울시립대 공개 AI 경진대회 - 동상"
+        image: /images/projects/achievement.svg
+        content: "K-Means 기반 16가지 축구 성향 분석 + Gemini 2.5 Flash 캐릭터 카드 생성 앱 'Mingle-K'"
+
+      - title: "🎖️ 제13회 빅콘테스트 (AI/데이터 경진대회) - 장려상"
+        image: /images/projects/achievement.svg
+        content: "운영위원회 위원장상 / 소상공인을 위한 Multi-Agent + RAG 마케팅 전략 추천 시스템 (이중차분법 검증)"
+
+      - title: "🎓 KT 에이블스쿨 - 3관왕"
+        image: /images/projects/achievement.svg
+        content: "우수 수료생 + 우수 기자단 + 빅프로젝트 우수상"
+
+  # Activities (대외활동) - 별도 페이지에서만 사용
+  activities:
+    enable: true
+    items:
+      - title: "전북대학교 AI/빅데이터 학회 JBIG"
+        period: "2023 - 현재"
+        role: "회장 (2024 - 현재)"
+        image: /images/projects/achievement.svg
+        content: "ML/DL 커리큘럼 기획·운영, 풀스택 홈페이지 유지보수, 우수 지프지기상 수상"
+      - title: "KT 에이블스쿨 부트캠프"
+        period: "2024 - 2025"
+        role: "AI 트랙 수강생"
+        image: /images/projects/achievement.svg
+        content: "전북대 지역인재 전형 선발, 우수 수료생 / 우수 기자단 / 빅프로젝트 우수상 3관왕"
+      - title: "(예시) 전주국제영화제 봉사활동"
+        period: "기간을 작성하세요"
+        role: "역할"
+        image: /images/projects/achievement.svg
+        content: "활동 내용을 작성하세요. 이 항목들은 예시이니 본인 활동으로 교체하세요."
+      - title: "(예시) 교육봉사"
+        period: "기간"
+        role: "봉사자"
+        image: /images/projects/achievement.svg
+        content: "활동 내용 placeholder"
+
+  # Projects
+  projects:
+    enable: true
+    items:
+      - title: "JBIG - 학회 풀스택 플랫폼"
+        slug: "jbig"
+        roles: "Lead, Fullstack"
+        image: /images/projects/jbig.svg
+        emoji: "🌐"
+        content: |-
+          전북대학교 AI/빅데이터 학회의 공식 플랫폼. React/TypeScript 프론트엔드와 Django REST API 백엔드, PostgreSQL DB로 구성된 학회 전용 서비스입니다. NCP Object Storage 기반 Presigned URL 업로드, Supabase DB 마이그레이션, Gunicorn/Nginx 배포 환경을 직접 구축했습니다.
+        badges:
+          - "React"
+          - "TypeScript"
+          - "Django"
+          - "PostgreSQL"
+          - "NCP"
+        links:
+          live: "https://www.jbig.co.kr"
+          github: "https://github.com/dev-JBIG"
+          pdf: ""
+          news: ""
+
+      - title: "ITDA - AI 이동장터 솔루션"
+        slug: "itda"
+        roles: "AI, Lead, PM"
+        image: /images/projects/itda.svg
+        emoji: "🚚"
+        content: |-
+          식품사막 지역 어르신을 위한 AI 기반 이동장터 운영 시스템. 다차원 데이터 융합 경로 최적화 알고리즘과 마을별 수요 예측 ML 모델, 구매 패턴 기반 위기 징후 탐지 알고리즘을 구현했습니다. 2025 SW융합 해커톤 우수상(대구광역시장상) 수상작.
+        badges:
+          - "Python"
+          - "ML"
+          - "경로 최적화"
+        links:
+          live: ""
+          github: "https://github.com/HaimLee-4869/ITDA"
+          pdf: ""
+          news: "https://www.youtube.com/live/B3B9QCsW6Ko?si=O71t_CHaQno4Rf7b&t=1620"
+
+      - title: "J-Connect - 지역 가치 발견 플랫폼"
+        slug: "jconnect"
+        roles: "AI, Solo"
+        image: /images/projects/jconnect.svg
+        emoji: "🗺️"
+        content: |-
+          전북 지역 소멸 문제 해결을 위한 RAG 기반 AI 플랫폼. Random Forest 회귀로 정주 유인 지수가 단기 관광 지수보다 3배 더 영향력 있음을 검증했습니다. 공공데이터 임베딩 벡터 DB로 LLM 할루시네이션을 최소화하고, K-Means 클러스터링으로 '나만의 테마 지도'를 구현했습니다.
+        badges:
+          - "RAG"
+          - "Random Forest"
+          - "K-Means"
+          - "Vector DB"
+        links:
+          live: ""
+          github: ""
+          pdf: ""
+          news: ""
+
+      - title: "케어내비 - 고령 환자 동행 AI 디바이스"
+        slug: "carenavi"
+        roles: "AI, Lead, IoT"
+        image: /images/projects/carenavi.svg
+        emoji: "🏥"
+        content: |-
+          GPS가 닿지 않는 병원 실내에서 UWB와 WiFi RTT 하이브리드 측위로 정밀 위치 추적. 엘리베이터 대기 시간과 고령자 보행 속도를 가중치로 반영한 다익스트라 알고리즘 직접 구현. NLP 기반 상황 인지 + 정서적 케어 TTS로 '인간적인 동반자' 경험 제공.
+        badges:
+          - "UWB"
+          - "다익스트라"
+          - "NLP"
+          - "TTS"
+        links:
+          live: ""
+          github: ""
+          pdf: ""
+          news: ""
+
+      - title: "항만 물류 AI 에이전트"
+        slug: "port-ai"
+        roles: "AI, Backend"
+        image: /images/projects/port-ai.svg
+        emoji: "🚢"
+        content: |-
+          CNN+LSTM 앙상블 모델로 장치장 혼잡도 예측 R² 0.999, 물동량 예측 MAPE 2.95% 달성. RAG 기반 항만 규정 자연어 답변 시스템 + AI-OCR 통관 서류 자동 검수로 리드타임 40% 단축. 한국해양진흥공사 사장상 수상작.
+        badges:
+          - "CNN+LSTM"
+          - "RAG"
+          - "AI-OCR"
+        links:
+          live: ""
+          github: ""
+          pdf: ""
+          news: ""
+
+  # Contact
+  contact:
+    enable: true
+    content: 협업 제안이나 궁금한 점이 있으시면 편하게 연락주세요!
+    btnName: Mail me
+    btnLink: mailto:your_email@example.com
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: false
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com/HaimLee-4869
+      linkedin: https://linkedin.com
+
+  listPages:
+    disableFeaturedImage: false
+
+  singlePages:
+    socialShare: true
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"

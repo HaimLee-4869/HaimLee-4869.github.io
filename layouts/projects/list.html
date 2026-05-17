@@ -1,0 +1,61 @@
+{{ define "main" }}
+<section id="projects" class="projects" style="padding-top: 120px; padding-bottom: 80px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h2 class="section-title">{{ .Title }}</h2>
+        {{ with .Description }}
+        <p class="lead text-muted">{{ . }}</p>
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="row g-4">
+      {{ range .Site.Params.projects.items }}
+      {{ $slug := .slug }}
+      {{ $detailPath := printf "/projects/%s/" $slug }}
+      {{ $links := .links }}
+      <div class="col-md-6 col-lg-4">
+        <div class="card project-card h-100">
+          <a href="{{ $detailPath | absURL }}" class="card-stretched-link" aria-label="{{ .title }} 상세 보기"></a>
+          <div class="card-image-wrapper">
+            {{ with .roles }}
+            <span class="role-badge">{{ . }}</span>
+            {{ end }}
+            {{ with .image }}
+            <img src="{{ . | absURL }}" class="card-img-top" alt="">
+            {{ end }}
+          </div>
+          <div class="card-body">
+            {{ with .badges }}
+            <div class="mb-2">
+              {{ range . }}
+              <span class="badge me-1 mb-1">{{ . }}</span>
+              {{ end }}
+            </div>
+            {{ end }}
+            <h3 class="card-title h6">{{ .title }}</h3>
+            <p class="card-text">{{ .content | markdownify }}</p>
+          </div>
+          <div class="card-footer card-link-footer">
+            <div class="link-buttons">
+              {{ if $links }}
+                {{ $live := index $links "live" }}
+                {{ if $live }}<a href="{{ $live }}" target="_blank" rel="noopener" class="link-btn">Live Site</a>{{ end }}
+                {{ $gh := index $links "github" }}
+                {{ if $gh }}<a href="{{ $gh }}" target="_blank" rel="noopener" class="link-btn">GitHub</a>{{ end }}
+                {{ $pdf := index $links "pdf" }}
+                {{ if $pdf }}<a href="{{ $pdf }}" target="_blank" rel="noopener" class="link-btn">발표자료</a>{{ end }}
+                {{ $news := index $links "news" }}
+                {{ if $news }}<a href="{{ $news }}" target="_blank" rel="noopener" class="link-btn">언론보도</a>{{ end }}
+              {{ end }}
+            </div>
+            <a href="{{ $detailPath | absURL }}" class="more-btn">더보기 →</a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

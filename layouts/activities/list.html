@@ -1,0 +1,36 @@
+{{ define "main" }}
+<section id="activities" class="activities" style="padding-top: 120px; padding-bottom: 80px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h2 class="section-title">{{ .Title }}</h2>
+        {{ with .Description }}
+        <p class="lead text-muted">{{ . }}</p>
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="row g-4">
+      {{ range .Site.Params.activities.items }}
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          {{ if .image }}
+          <img src="{{ .image | absURL }}" class="card-img-top" alt="{{ .title }}">
+          {{ end }}
+          <div class="card-body">
+            {{ if .period }}
+            <small class="text-muted d-block mb-1" style="font-weight: 500; color: var(--pink-hover) !important;">{{ .period }}</small>
+            {{ end }}
+            <h3 class="card-title h6">{{ .title }}</h3>
+            {{ if .role }}
+            <p class="text-muted mb-2" style="font-size: 0.85rem; font-weight: 500;">{{ .role }}</p>
+            {{ end }}
+            <p class="card-text">{{ .content | markdownify }}</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

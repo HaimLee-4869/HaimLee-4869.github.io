@@ -1,0 +1,952 @@
+<!-- Pretendard 한글 폰트 (CDN) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+
+<style>
+:root {
+  --pink-base: #f4a4c4;
+  --pink-hover: #e879a3;
+  --pink-deep: #c2185b;
+  --font-kr: 'Pretendard', 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+}
+
+/* ============================================
+   ⭐ 폰트 전역 통일
+   ============================================ */
+html, body, h1, h2, h3, h4, h5, h6, p, li, a, button, input, textarea, label, select,
+.card, .card-title, .card-text, .nav-link, .btn, .badge,
+.navbar, .navbar-brand, .section-title, .lead {
+  font-family: var(--font-kr) !important;
+}
+h1, h2, .section-title {
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* ============================================
+   ⭐⭐⭐ 자동 스크롤 강력 차단
+   ============================================ */
+html, body {
+  scroll-behavior: auto !important;
+  scroll-snap-type: none !important;
+  overflow-anchor: none !important;
+  scroll-padding-top: 0 !important;
+}
+
+/* ============================================
+   ⭐⭐⭐⭐ Hero 고양이 흔들림 fix
+   - 컨테이너 높이를 고정하고 그 안에서 transform만 적용
+   - 부모 layout이 고양이 위치 변화에 영향 받지 않도록
+   ============================================ */
+#hero .image {
+  /* 컨테이너에 명시적 높이/너비 줘서 고양이가 움직여도 layout 변동 없음 */
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  /* 고양이 + 둥둥 여유 공간(±15px) 합쳐서 충분히 큰 박스 */
+  min-height: 480px !important;
+  overflow: visible !important;
+}
+
+#hero .image img {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  /* will-change로 브라우저가 transform만 갱신하도록 힌트 */
+  will-change: transform !important;
+  /* contain으로 layout 격리 (이게 핵심!) */
+  contain: layout style !important;
+  animation: floatCat 3.5s ease-in-out infinite !important;
+}
+#hero .image img:hover {
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+@keyframes floatCat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+/* 작은 화면(분할창 포함)에서는 컨테이너 크기 조정 */
+@media (max-width: 991px) {
+  #hero .image {
+    min-height: 360px !important;
+  }
+}
+
+/* ============================================
+   ⭐ Navbar 구분선
+   ============================================ */
+.navbar-nav {
+  flex-wrap: nowrap !important;
+}
+.nav-divider-pink {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 8px !important;
+  color: var(--pink-base) !important;
+  font-weight: 200 !important;
+  font-size: 1.4em !important;
+  line-height: 1 !important;
+  user-select: none !important;
+  pointer-events: none !important;
+  opacity: 0.6 !important;
+  align-self: center !important;
+  flex-shrink: 0 !important;
+}
+@media (max-width: 991px) {
+  .nav-divider-pink { display: none !important; }
+  .navbar-nav { flex-wrap: wrap !important; }
+}
+
+/* sticky/fixed navbar 제거 */
+.navbar.sticky-top,
+.navbar.fixed-top,
+nav.sticky-top,
+nav.fixed-top {
+  position: relative !important;
+  top: 0 !important;
+}
+
+/* ============================================
+   ⭐⭐ 홈에서 Projects/Achievements/Recent Posts 강제 숨김
+   - body가 home 클래스 없을 가능성 → JS가 body에 클래스 추가
+   ============================================ */
+body.is-home-page #projects,
+body.is-home-page #achievements,
+body.is-home-page #recent-posts,
+body.is-home-page .recent-posts,
+body.is-home-page section[id*="recent"] {
+  display: none !important;
+}
+
+footer .recent-posts,
+footer #recent-posts {
+  display: none !important;
+}
+
+/* ============================================
+   About 섹션 - 사진
+   ============================================ */
+#about,
+#about .container,
+#about .row,
+#about .image,
+#about [class*="col-"] {
+  overflow: visible !important;
+}
+#about .row { align-items: center !important; }
+#about .image {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+#about .image img {
+  width: 240px !important;
+  height: 320px !important;
+  max-width: 100% !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 24px !important;
+  border: none !important;
+  box-shadow: 
+    0 0 0 3px var(--pink-base),
+    0 20px 50px -15px rgba(232, 121, 163, 0.35) !important;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+#about .image img:hover {
+  transform: scale(1.03);
+  box-shadow: 
+    0 0 0 3px var(--pink-hover),
+    0 25px 60px -15px rgba(232, 121, 163, 0.5) !important;
+}
+@media (max-width: 768px) {
+  #about .image img { width: 200px !important; height: 267px !important; }
+}
+
+/* ============================================
+   Experience 섹션
+   ============================================ */
+#experience { padding: 80px 0 !important; }
+
+#experience .nav-pills .nav-link,
+#experience .nav-tabs .nav-link {
+  padding: 14px 22px !important;
+  margin: 4px 6px !important;
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+  letter-spacing: -0.01em !important;
+  color: #6b6b6b !important;
+  border-radius: 8px !important;
+  border: none !important;
+  transition: all 0.25s ease !important;
+}
+#experience .nav-pills .nav-link:hover,
+#experience .nav-tabs .nav-link:hover {
+  color: var(--pink-deep) !important;
+  background: rgba(244, 164, 196, 0.08) !important;
+}
+#experience .nav-pills .nav-link.active,
+#experience .nav-tabs .nav-link.active {
+  color: var(--pink-deep) !important;
+  background: rgba(244, 164, 196, 0.15) !important;
+  font-weight: 600 !important;
+  border-bottom: 2px solid var(--pink-base) !important;
+}
+#experience .tab-content {
+  padding: 36px 40px !important;
+  background: #ffffff !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 24px -8px rgba(232, 121, 163, 0.18) !important;
+  margin-left: 8px !important;
+}
+#experience .tab-content h3,
+#experience .tab-content h5 {
+  font-weight: 700 !important;
+  font-size: 1.35rem !important;
+  letter-spacing: -0.02em !important;
+  margin-bottom: 8px !important;
+  color: #1a1a1a !important;
+}
+#experience .tab-content h3 small,
+#experience .tab-content h5 small,
+#experience .tab-content .company-link,
+#experience .tab-content a {
+  font-weight: 500 !important;
+  color: var(--pink-hover) !important;
+  font-size: 0.95rem !important;
+}
+#experience .tab-content p {
+  margin-bottom: 16px !important;
+  line-height: 1.75 !important;
+  color: #3a3a3a !important;
+  font-size: 0.95rem !important;
+}
+#experience .tab-content ul { padding-left: 20px !important; }
+#experience .tab-content ul li {
+  padding: 6px 0 !important;
+  line-height: 1.7 !important;
+  color: #3a3a3a !important;
+  font-size: 0.93rem !important;
+}
+#experience .tab-content ul li::marker { color: var(--pink-base); }
+#experience .tab-content strong {
+  color: #1a1a1a !important;
+  font-weight: 600 !important;
+  background: linear-gradient(180deg, transparent 60%, rgba(244, 164, 196, 0.25) 60%);
+  padding: 0 2px;
+}
+
+/* ============================================
+   카드 (Projects / Awards / Activities)
+   ============================================ */
+#projects, #achievements, #awards, #activities {
+  padding: 80px 0 !important;
+}
+.card {
+  border: none !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 24px -6px rgba(232, 121, 163, 0.15) !important;
+  transition: transform 0.35s ease, box-shadow 0.35s ease !important;
+  background: #ffffff !important;
+}
+.card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 16px 40px -10px rgba(232, 121, 163, 0.3) !important;
+}
+.card img,
+.card-img-top {
+  width: 100% !important;
+  height: 220px !important;
+  object-fit: cover !important;
+  border-radius: 0 !important;
+  background: linear-gradient(135deg, #fce4ec 0%, #f4a4c4 100%);
+}
+.card-body { padding: 24px 26px !important; }
+.card-body h3,
+.card-body h5,
+.card-title {
+  font-weight: 700 !important;
+  font-size: 1.05rem !important;
+  letter-spacing: -0.02em !important;
+  color: #1a1a1a !important;
+  line-height: 1.4 !important;
+  margin-bottom: 10px !important;
+}
+.card-body p,
+.card-text {
+  color: #5a5a5a !important;
+  font-size: 0.92rem !important;
+  line-height: 1.65 !important;
+}
+.badge {
+  background: rgba(244, 164, 196, 0.15) !important;
+  color: var(--pink-deep) !important;
+  font-weight: 500 !important;
+  font-size: 0.78rem !important;
+  padding: 6px 12px !important;
+  border-radius: 20px !important;
+  margin: 2px 4px 2px 0 !important;
+}
+.card-footer {
+  background: #fafafa !important;
+  border-top: 1px solid #f0f0f0 !important;
+  padding: 14px 20px !important;
+}
+.card-footer a,
+.card-footer .btn {
+  color: var(--pink-hover) !important;
+  border-color: var(--pink-base) !important;
+  font-size: 0.88rem !important;
+  font-weight: 500 !important;
+}
+.card-footer .btn-outline-primary:hover,
+.card-footer a:hover {
+  background: var(--pink-base) !important;
+  color: white !important;
+  border-color: var(--pink-base) !important;
+}
+
+/* 타이핑 효과 */
+.typing-cursor::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 3px;
+  color: var(--pink-base);
+  font-weight: 100;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* 하트 커서 */
+#pink-cursor {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  pointer-events: none !important;
+  z-index: 9999 !important;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+  opacity: 0;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+#pink-cursor svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: transparent !important;
+  overflow: visible !important;
+}
+#pink-cursor svg path { transition: fill 0.3s; }
+#pink-cursor.visible { opacity: 1; }
+#pink-cursor.hover { width: 46px; height: 46px; }
+#pink-cursor.hover svg path { fill: var(--pink-hover); }
+@media (hover: none) and (pointer: coarse) {
+  #pink-cursor { display: none !important; }
+}
+
+/* ============================================
+   ⭐ Project 카드 새 디자인 (역할 배지 + 텍스트 버튼)
+   ============================================ */
+.card-link-wrapper {
+  display: block !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  height: 100%;
+}
+.card-link-wrapper:hover {
+  text-decoration: none !important;
+}
+
+.project-card {
+  display: flex !important;
+  cursor: pointer;
+  flex-direction: column !important;
+}
+
+.card-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.role-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--pink-deep);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 5px 11px;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 2;
+  font-family: var(--font-kr);
+}
+
+/* navbar가 항상 카드 위에 있도록 */
+.navbar, nav {
+  z-index: 1000 !important;
+}
+
+.card-link-footer {
+  background: #fafafa !important;
+  border-top: 1px solid #f0f0f0 !important;
+  padding: 12px 16px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.link-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.link-btn {
+  display: inline-block;
+  color: var(--pink-hover) !important;
+  font-size: 0.72rem !important;
+  font-weight: 500;
+  text-decoration: none !important;
+  border: 1px solid var(--pink-base);
+  padding: 4px 10px;
+  border-radius: 14px;
+  transition: all 0.2s ease;
+}
+
+.link-btn:hover {
+  background: var(--pink-base);
+  color: white !important;
+  border-color: var(--pink-base);
+}
+
+.more-btn,
+.more-btn:link,
+.more-btn:visited {
+  display: inline-block !important;
+  color: #ffffff !important;
+  background: var(--pink-hover) !important;
+  background-color: #e879a3 !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  padding: 6px 14px !important;
+  border-radius: 14px !important;
+  transition: all 0.2s ease !important;
+  white-space: nowrap !important;
+  border: none !important;
+  letter-spacing: 0.02em !important;
+}
+
+.more-btn:hover,
+.more-btn:focus,
+.more-btn:active {
+  background: var(--pink-deep) !important;
+  background-color: #c2185b !important;
+  color: #ffffff !important;
+  transform: translateX(2px);
+  text-decoration: none !important;
+}
+
+/* ============================================
+   ⭐ 임베드 미리보기 (Live Site, YouTube, PDF)
+   ============================================ */
+.embed-preview {
+  margin: 1.5rem 0;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 2px solid var(--pink-base);
+  box-shadow: 0 6px 20px -8px rgba(232, 121, 163, 0.25);
+  background: #fafafa;
+  position: relative;
+}
+
+.embed-preview-label {
+  background: rgba(244, 164, 196, 0.15);
+  color: var(--pink-deep);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--pink-base);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.embed-preview iframe,
+.embed-preview embed {
+  width: 100%;
+  height: 480px;
+  border: none;
+  display: block;
+  background: white;
+}
+
+/* YouTube 임베드 - aspect-ratio로 16:9 비율 자동 */
+.embed-preview.youtube iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  display: block;
+}
+
+/* ============================================
+   ⭐ Project 상세 페이지
+   ============================================ */
+.detail-breadcrumb {
+  font-size: 0.85rem;
+  color: #888;
+}
+.detail-breadcrumb a {
+  color: var(--pink-hover);
+  text-decoration: none;
+}
+.detail-breadcrumb a:hover {
+  color: var(--pink-deep);
+  text-decoration: underline;
+}
+.detail-breadcrumb .sep {
+  margin: 0 8px;
+  color: #ccc;
+}
+.detail-breadcrumb .current {
+  color: #555;
+  font-weight: 500;
+}
+
+.back-link {
+  color: var(--pink-hover) !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+.back-link:hover {
+  color: var(--pink-deep) !important;
+  transform: translateX(-3px);
+}
+
+.detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.role-badge-detail {
+  background: rgba(244, 164, 196, 0.2);
+  color: var(--pink-deep);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+}
+
+.detail-title {
+  font-size: 2.2rem !important;
+  font-weight: 700 !important;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.detail-hero-image {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px -8px rgba(232, 121, 163, 0.25);
+}
+
+.detail-hero-image img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.detail-content {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #2a2a2a;
+}
+.detail-content h2 {
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 1rem !important;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+}
+.detail-content h3 {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 0.8rem !important;
+  color: #2a2a2a;
+}
+.detail-content p {
+  margin-bottom: 1.2rem !important;
+}
+.detail-content strong {
+  color: var(--pink-deep);
+  font-weight: 600;
+  background: linear-gradient(180deg, transparent 60%, rgba(244, 164, 196, 0.25) 60%);
+  padding: 0 2px;
+}
+.detail-content code {
+  background: rgba(244, 164, 196, 0.1);
+  color: var(--pink-deep);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace !important;
+}
+
+.pink-divider {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--pink-base) 50%, transparent 100%);
+  opacity: 0.6;
+}
+
+.link-btn-large {
+  display: inline-block;
+  color: var(--pink-hover) !important;
+  font-size: 0.95rem !important;
+  font-weight: 500;
+  text-decoration: none !important;
+  border: 2px solid var(--pink-base);
+  padding: 10px 20px;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+}
+
+.link-btn-large:hover {
+  background: var(--pink-base);
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px -4px rgba(232, 121, 163, 0.4);
+}
+
+.back-btn-bottom {
+  display: inline-block;
+  color: var(--pink-hover) !important;
+  font-size: 0.95rem !important;
+  font-weight: 500;
+  text-decoration: none !important;
+  padding: 10px 24px;
+  border: 1px solid var(--pink-base);
+  border-radius: 24px;
+  transition: all 0.25s ease;
+}
+
+.back-btn-bottom:hover {
+  background: var(--pink-base);
+  color: white !important;
+  transform: translateX(-3px);
+}
+
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+  
+  function getPinkHover() {
+    var c = getComputedStyle(document.documentElement).getPropertyValue('--pink-hover').trim();
+    return c || '#e879a3';
+  }
+  function getPinkBase() {
+    var c = getComputedStyle(document.documentElement).getPropertyValue('--pink-base').trim();
+    return c || '#f4a4c4';
+  }
+  
+  // ===== ⭐ 홈 페이지 식별: body에 클래스 추가 =====
+  // 홈은 path가 "/"이거나 "/index.html"
+  var path = window.location.pathname;
+  if (path === '/' || path === '/index.html' || path.endsWith('/index.html')) {
+    document.body.classList.add('is-home-page');
+    
+    // CSS로 안 가려지는 경우 대비: 직접 DOM 제거
+    setTimeout(function() {
+      var idsToHide = ['projects', 'achievements', 'recent-posts'];
+      idsToHide.forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+      // class에 recent 들어가는 모든 요소
+      document.querySelectorAll('[class*="recent-posts"], [id*="recent-posts"]').forEach(function(el) {
+        el.style.display = 'none';
+      });
+    }, 50);
+  }
+  
+  // ===== ⭐ 자동 스크롤 차단 =====
+  if (window.bootstrap && window.bootstrap.ScrollSpy) {
+    document.querySelectorAll('[data-bs-spy="scroll"]').forEach(function(el) {
+      el.removeAttribute('data-bs-spy');
+      el.removeAttribute('data-bs-target');
+      var instance = window.bootstrap.ScrollSpy.getInstance(el);
+      if (instance) instance.dispose();
+    });
+  }
+  if (window.jQuery) {
+    try { window.jQuery('[data-spy="scroll"]').each(function(){
+      window.jQuery(this).removeAttr('data-spy').removeAttr('data-target');
+    }); } catch(e) {}
+  }
+  
+  // 윈도우 리사이즈 시 스크롤 위치 강제 보호
+  var resizeTimer = null;
+  window.addEventListener('resize', function() {
+    var savedScroll = window.scrollY;
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      if (Math.abs(window.scrollY - savedScroll) < 200) {
+        window.scrollTo(0, savedScroll);
+      }
+    }, 50);
+  });
+  
+  // 모든 a[href^="#"] 클릭 시 smooth scroll 차단
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var href = this.getAttribute('href');
+      if (href === '#' || href === '') return;
+      e.preventDefault();
+      var target = document.querySelector(href);
+      if (target) {
+        var top = target.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top: top, behavior: 'auto' });
+        history.pushState(null, '', href);
+      }
+    });
+  });
+  
+  // ===== Navbar 구분선 (li가 아닌 span) =====
+  function addNavSeparator() {
+    var navList = document.querySelector('.navbar-nav');
+    if (!navList) return false;
+    if (navList.querySelector('.nav-divider-pink')) return true;
+    
+    var navItems = navList.querySelectorAll('.nav-item');
+    var contactItem = null;
+    
+    for (var i = 0; i < navItems.length; i++) {
+      var link = navItems[i].querySelector('a');
+      if (!link) continue;
+      var href = link.getAttribute('href') || '';
+      var text = link.textContent.trim().toLowerCase();
+      if (href.indexOf('#contact') !== -1 || text === 'contact') {
+        contactItem = navItems[i];
+        break;
+      }
+    }
+    
+    if (contactItem && contactItem.nextElementSibling) {
+      var divider = document.createElement('span');
+      divider.className = 'nav-divider-pink';
+      divider.textContent = '|';
+      divider.setAttribute('aria-hidden', 'true');
+      contactItem.parentNode.insertBefore(divider, contactItem.nextSibling);
+      return true;
+    }
+    return false;
+  }
+  
+  if (!addNavSeparator()) {
+    setTimeout(addNavSeparator, 100);
+    setTimeout(addNavSeparator, 500);
+    setTimeout(addNavSeparator, 1500);
+  }
+  
+  // Achievements → Awards
+  document.querySelectorAll('a').forEach(function(a) {
+    if (a.textContent.trim() === 'Achievements' && (a.getAttribute('href') || '').indexOf('#achievements') !== -1) {
+      a.textContent = 'Awards';
+    }
+  });
+  
+  // ===== 1. 타이핑 효과 =====
+  function findHeroSubtitle() {
+    var heroSection = document.getElementById('hero');
+    if (!heroSection) return null;
+    var elements = heroSection.querySelectorAll('h1, h2, h3, h4, p, span, div');
+    for (var i = 0; i < elements.length; i++) {
+      var el = elements[i];
+      if (el.children.length === 0 && el.textContent.trim() === 'I build things for the web') {
+        return el;
+      }
+    }
+    return null;
+  }
+  
+  var subtitleEl = findHeroSubtitle();
+  if (subtitleEl) {
+    var fullText = subtitleEl.textContent.trim();
+    subtitleEl.textContent = '';
+    subtitleEl.classList.add('typing-cursor');
+    
+    function startTyping() {
+      var charIdx = 0;
+      function typeChar() {
+        if (charIdx < fullText.length) {
+          subtitleEl.textContent += fullText.charAt(charIdx);
+          charIdx++;
+          setTimeout(typeChar, 80);
+        } else {
+          setTimeout(startErasing, 3000);
+        }
+      }
+      typeChar();
+    }
+    
+    function startErasing() {
+      function eraseChar() {
+        if (subtitleEl.textContent.length > 0) {
+          subtitleEl.textContent = subtitleEl.textContent.slice(0, -1);
+          setTimeout(eraseChar, 40);
+        } else {
+          setTimeout(startTyping, 500);
+        }
+      }
+      eraseChar();
+    }
+    
+    setTimeout(startTyping, 500);
+  }
+  
+  // ===== 2. 하트 커서 =====
+  if (!isTouch) {
+    var cursor = document.createElement('div');
+    cursor.id = 'pink-cursor';
+    cursor.innerHTML = '<svg viewBox="0 0 100 92" xmlns="http://www.w3.org/2000/svg"><path d="M50,90 C20,70 0,50 0,28 C0,12 12,0 28,0 C38,0 46,8 50,16 C54,8 62,0 72,0 C88,0 100,12 100,28 C100,50 80,70 50,90 Z" fill="' + getPinkBase() + '"/></svg>';
+    document.body.appendChild(cursor);
+    
+    var mouseX = 0, mouseY = 0;
+    var cursorX = 0, cursorY = 0;
+    var visible = false;
+    
+    document.addEventListener('mousemove', function(e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      if (!visible) {
+        cursor.classList.add('visible');
+        visible = true;
+      }
+    });
+    
+    document.addEventListener('mouseleave', function() {
+      cursor.classList.remove('visible');
+      visible = false;
+    });
+    
+    function animateCursor() {
+      cursorX += (mouseX - cursorX) * 0.15;
+      cursorY += (mouseY - cursorY) * 0.15;
+      cursor.style.left = cursorX + 'px';
+      cursor.style.top = cursorY + 'px';
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+    
+    document.addEventListener('mouseover', function(e) {
+      if (e.target.closest('a, button, input, textarea, select, .btn, [role="button"], .card')) {
+        cursor.classList.add('hover');
+      }
+    });
+    document.addEventListener('mouseout', function(e) {
+      if (e.target.closest('a, button, input, textarea, select, .btn, [role="button"], .card')) {
+        cursor.classList.remove('hover');
+      }
+    });
+  }
+  
+  // ===== ⭐ 카드 전체 클릭 시 상세 페이지로 이동 =====
+  function attachCardClicks() {
+    document.querySelectorAll('.project-card').forEach(function(card) {
+      if (card.dataset.clickAttached) return;
+      var detailLink = card.querySelector('.card-stretched-link');
+      if (!detailLink) return;
+      
+      card.style.cursor = 'pointer';
+      card.dataset.clickAttached = '1';
+      
+      card.addEventListener('click', function(e) {
+        // 외부 링크 버튼이나 더보기 버튼 클릭은 카드 클릭 무시 (그쪽 동작 우선)
+        if (e.target.closest('.link-btn, .more-btn')) return;
+        // 이미 stretched-link 자체 클릭이면 그대로 진행
+        if (e.target === detailLink || e.target.classList.contains('card-stretched-link')) return;
+        // 그 외 카드의 빈 공간 → 상세 페이지로 이동
+        window.location.href = detailLink.href;
+      });
+    });
+  }
+  
+  attachCardClicks();
+  setTimeout(attachCardClicks, 500);
+  setTimeout(attachCardClicks, 1500);
+  
+  // ===== 3. 클릭 핑크 파티클 =====
+  if (!isTouch) {
+    document.addEventListener('click', function(e) {
+      var x = e.clientX;
+      var y = e.clientY;
+      var color = getPinkHover();
+      
+      for (var i = 0; i < 14; i++) {
+        (function(idx) {
+          var particle = document.createElement('div');
+          var size = 7 + Math.random() * 8;
+          var angle = (Math.PI * 2 * idx) / 14 + (Math.random() - 0.5) * 0.4;
+          var distance = 60 + Math.random() * 60;
+          
+          particle.style.cssText = 
+            'position:fixed;' +
+            'left:' + x + 'px;' +
+            'top:' + y + 'px;' +
+            'width:' + size + 'px;' +
+            'height:' + size + 'px;' +
+            'background:' + color + ';' +
+            'border-radius:50%;' +
+            'pointer-events:none;' +
+            'z-index:9998;' +
+            'transform:translate(-50%,-50%);' +
+            'transition:all 0.85s cubic-bezier(0.2,0.8,0.4,1);' +
+            'opacity:1;' +
+            'box-shadow:0 0 16px ' + color + ', 0 0 6px ' + color + ';';
+          
+          document.body.appendChild(particle);
+          
+          requestAnimationFrame(function() {
+            particle.style.left = (x + Math.cos(angle) * distance) + 'px';
+            particle.style.top = (y + Math.sin(angle) * distance) + 'px';
+            particle.style.opacity = '0';
+            particle.style.transform = 'translate(-50%,-50%) scale(0.3)';
+          });
+          
+          setTimeout(function() { particle.remove(); }, 850);
+        })(i);
+      }
+    });
+  }
+});
+</script>
