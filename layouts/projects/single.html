@@ -57,7 +57,7 @@
         <div class="d-flex flex-wrap gap-2">
           {{ if $live }}<a href="{{ $live }}" target="_blank" rel="noopener" class="link-btn-large">🔗 Live Site</a>{{ end }}
           {{ if $gh }}<a href="{{ $gh }}" target="_blank" rel="noopener" class="link-btn-large">⚡ GitHub</a>{{ end }}
-          {{ if $pdf }}<a href="{{ $pdf }}" target="_blank" rel="noopener" class="link-btn-large">📄 발표자료</a>{{ end }}
+          {{ if $pdf }}<a href="{{ $pdf }}" target="_blank" rel="{{ if eq .Params.slug "mingle-k" }}noopener noreferrer{{ else }}noopener{{ end }}" class="link-btn-large">{{ if eq .Params.slug "mingle-k" }}📄 PDF{{ else }}📄 발표자료{{ end }}</a>{{ end }}
           {{ if $news }}<a href="{{ $news }}" target="_blank" rel="noopener" class="link-btn-large">📰 언론보도</a>{{ end }}
         </div>
       </div>

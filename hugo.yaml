@@ -64,8 +64,8 @@ params:
   animate: true
 
   theme:
-    # disableThemeToggle: true
-    # defaultTheme: "light"
+    disableThemeToggle: true
+    defaultTheme: "light"
 
   font:
     fontSize: 1rem
@@ -95,6 +95,7 @@ params:
   navbar:
     align: ms-auto
     brandName: "EUNJUNG LEE"
+    brandLogo: "/images/nabi.png"
     disableSearch: false
     stickyNavBar:
       enable: true
@@ -113,13 +114,14 @@ params:
     enable: true
     intro: "Hi, I'm"
     title: "EUNJUNG LEE."
-    subtitle: "I build things for the web"
-    content: "전북대학교 컴퓨터공학부 4학년. 데이터로 사회를 읽고, 코드로 작은 변화를 만드는 것을 좋아합니다."
-    image: /images/hero-cat.svg
+    subtitle: "From data to action."
+    content: "Python 기반 데이터 분석·ML 모델링, RAG·AI Agent, 웹 서비스 구현까지 AI 기술을 실제 서비스로 연결합니다."
+    image: /images/nabi.png
     bottomImage:
       enable: true
     button:
-      enable: true
+      # 이력서 공개 시 true로 되돌려 Resume 버튼을 다시 활성화합니다.
+      enable: false
       name: "Resume"
       url: "#"
       download: true
@@ -137,66 +139,54 @@ params:
     title: "About Me"
     image: "/images/profile.jpg"
     content: |-
-      무엇을 만들지보다 왜 만들어야 하는지를 먼저 묻는 개발자입니다. 전북대 AI/빅데이터 학회 JBIG 회장으로서 풀스택 서비스를 운영하며 실전 개발 경험을 쌓았고, RAG 기반 AI 에이전트와 CNN+LSTM 앙상블 예측 모델 등 다양한 ML/DL 프로젝트로 11개 대회에서 수상했습니다.
+      데이터와 AI를 활용해 복잡한 문제를 구조화하고, 기술적 가능성을 실제 서비스와 실행 과제로 연결하는 과정에 관심이 있습니다. 단순히 모델을 개발하는 데서 그치지 않고, 왜 이 문제가 발생했는지 정의하고 어떤 방식이 실제 환경에서 작동할지를 고민합니다.
 
-      앞으로는 ML/DL을 활용한 연구를 통해 더 깊은 기술적 깊이를 쌓고 싶습니다.
+      CJ올리브네트웍스에서는 고객 데이터를 분석해 브랜드 간 이동 패턴과 비즈니스 실행 과제를 도출했고, 섬루션에서는 기존 부표 제조 사업을 AI 기반 해양 데이터 서비스로 확장했습니다. 또한 실제 공공기관 AI 플랫폼, AI Agent, ML 프로젝트를 수행하며 데이터 분석부터 서비스 구현까지 경험했습니다.
+
+      현재는 AI·데이터와 비즈니스를 함께 이해하며, 기술을 실제 조직의 문제 해결과 의사결정에 연결하는 역량을 넓혀가고 있습니다.
     skills:
-      enable: true
-      title: "주로 사용하는 기술 스택입니다."
-      items:
-        - "Python"
-        - "PyTorch"
-        - "TensorFlow"
-        - "Scikit-learn"
-        - "React"
-        - "TypeScript"
-        - "Django"
-        - "PostgreSQL"
-        - "AWS"
-        - "Docker"
-        - "Git"
+      enable: false
 
   # Experience
   experience:
     enable: true
     items:
-      - company: "전북대학교 AI/빅데이터 학회 JBIG"
-        companyUrl: "https://www.jbig.co.kr"
-        jobs:
-          - name: "회장 & 풀스택 개발자"
-            date: "2025 - 현재"
-            content: |-
-              학회 운영진과 함께 한 학기 단위의 ML/DL 커리큘럼을 직접 기획하고, 매주 정기 세미나와 데이콘 코드 리뷰를 운영했습니다.
-
-              **JBIG 홈페이지 풀스택 유지보수 (React/TypeScript + Django REST + PostgreSQL)**
-
-              - 운영 중인 DB를 Supabase로 무중단 마이그레이션
-              - 파일 저장 방식을 Django 로컬에서 NCP Object Storage로 전환, Presigned URL 7단계 업로드로 서버 부하 절감
-              - boto3 ExpiresIn 파라미터의 NCP 특이사항을 직접 실험으로 검증하여 이미지 만료 이슈 해결
-              - Gunicorn/Nginx 배포 설정 및 환경 변수 가이드 문서화
-
       - company: "CJ올리브네트웍스"
-        companyUrl: "https://www.cjolivenetworks.co.kr"
         jobs:
-          - name: "데이터 분석 동계 인턴"
-            date: "2024"
-            content: |-
-              여의도 IFC몰에 입점한 5개 CJ 브랜드의 고객 이동 동선을 분석하여 매출 향상 전략을 도출하는 프로젝트를 수행했습니다.
-
-              - Pandas, Matplotlib, Seaborn 등을 활용한 데이터 전처리·시각화·예측 모델 구축 담당
-              - CJ ONE 회원 데이터 분석으로 브랜드 간 교차 방문이 객단가를 약 10% 상승시킨다는 양의 상관관계 확인
-              - 로지스틱 회귀 기반 브랜드 방문 예측 모델 (정확도 약 80%, AUC: CGV 0.94 / 올리브영 0.90)
-              - CGV 씨네샵 리뉴얼·브랜드 콜라보 팝업 등 실질적 매출 향상 방안을 실무진에 발표
-
-      - company: "KT 에이블스쿨"
-        companyUrl: "https://aivle.kt.co.kr"
+          - name: "DT Academy 인턴 · 데이터 분석"
+            date: "2025.01"
+            content: "IFC몰 내 5개 CJ 브랜드의 고객 데이터를 분석해 브랜드 간 이동 패턴과 잠재고객 세그먼트를 도출했습니다. Python 기반 PCA·군집분석·로지스틱 회귀를 활용하고, 분석 결과를 CINESHOP 리뉴얼·콜라보 팝업 등 비즈니스 실행 과제로 구체화해 <span class='experience-highlight'>경영진에게 발표</span>했습니다."
+            keywords: ["Python", "Data Analytics", "Business Insight"]
+      - company: "전북대학교 AI·빅데이터 학회 JBIG"
         jobs:
-          - name: "AI 트랙 부트캠프 (전북대 지역인재 전형)"
-            date: "2024 - 2025"
-            content: |-
-              웹 개발과 클라우드, AI를 아우르는 6개월 집중 교육 과정을 거쳤습니다.
-
-              - **3관왕 달성**: 우수 수료생 / 우수 기자단 / 빅프로젝트 우수상
+          - name: "학회장 · 풀스택 개발"
+            date: "2025.09 – 2026.07"
+            content: "전북대학교 AI·빅데이터 학회 회장으로 <span class='experience-highlight'>ML·DL 커리큘럼</span>과 주간 세미나를 기획·운영했습니다. React·TypeScript, Django, PostgreSQL 기반 학회 웹서비스를 개발·운영하고, <span class='experience-highlight'>Supabase DB 스키마 개편</span>과 <span class='experience-highlight'>데이터 마이그레이션</span>을 수행했습니다."
+            keywords: ["Leadership", "ML/DL", "Full-stack", "PostgreSQL"]
+      - company: "섬루션 (창업)"
+        jobs:
+          - name: "AI 데이터 서비스 기획/개발"
+            date: "2025.11 – 2026.06"
+            content: "스마트 부표에서 수집한 <span class='experience-highlight'>113만 건</span>의 해양 데이터를 기반으로 AI 해양 위험 예측 서비스를 개발했습니다. Python·XGBoost 기반 위험 예측 모델과 대시보드·알림 서비스를 구축하고, 기존 부표 제조 사업을 <span class='experience-highlight'>지자체 B2G·양식업 B2B 데이터 서비스</span>로 확장했습니다."
+            keywords: ["AX", "Python", "XGBoost", "AI Service", "Business Model"]
+      - company: "비버톡 (창업)"
+        jobs:
+          - name: "프론트엔드 · QA"
+            date: "2026.03 – 2026.08"
+            content: "외국인 대상 한국어 발음 교정 AI 서비스의 Flutter 프론트엔드를 개발하고 서비스 전반의 QA를 담당했습니다. 통화 API 원가 구조를 분석해 재과금 문제를 발견하고, 컨텍스트 압축과 모델별 파이프라인 분리로 <span class='experience-highlight'>건당 원가를 50% 절감</span>했습니다."
+            keywords: ["Flutter", "QA"]
+      - company: "Purdue University"
+        jobs:
+          - name: "PAGE Program Researcher · Machine Learning"
+            date: "2026.06 – 2026.07"
+            content: "미국 <span class='experience-highlight'>2,644개 카운티</span>의 35년 기후·농업 데이터를 Python으로 분석해 작물 수확량 예측 모델을 연구했습니다. <span class='experience-highlight'>9개 ML 모델</span>을 비교하고 공간적 데이터 누수를 고려한 GroupKFold 검증을 적용해 <span class='experience-highlight'>LightGBM R² 0.73</span>을 확보했으며, 극한고온 노출과 수확량의 관계를 분석했습니다."
+            keywords: ["Python", "Machine Learning", "LightGBM"]
+      - company: "전북특별자치도 협업"
+        jobs:
+          - name: "팀장 · 생성형 AI 플랫폼 고도화"
+            date: "2026.03 - 2026.06"
+            content: "전북특별자치도·소방본부와 요구사항을 조율하며 <span class='experience-highlight'>실제 공무원이 사용하는</span> 온프레미스 생성형 AI 플랫폼을 고도화했습니다. 한글·엑셀 웹 동시편집 기능을 설계·구현하고 공문서 렌더링 오류 개선 및 비주얼 회귀 테스트를 구축했으며, <span class='experience-highlight'>rHWP 오픈소스 PR 10건</span>이 <span class='experience-highlight'>모두 Merge</span>되었습니다."
+            keywords: ["GenAI", "On-premise", "Open Source"]
 
   # Education
   education:
@@ -207,12 +197,12 @@ params:
         school:
           name: "전북대학교"
           url: "https://www.jbnu.ac.kr"
-        date: "2022 - 현재 (4학년)"
         content: |-
-          - **AI/빅데이터 학회 JBIG 회장** 역임 (2025 - 현재)
-          - **소프트웨어중심대학사업단** 지역인재 전형 KT 에이블스쿨 선발
-          - 머신러닝/딥러닝, 데이터 분석, 풀스택 웹 개발 전반 학습
-          - 11회 대회 수상 (자세한 내역은 Achievements 섹션 참고)
+          AI·데이터 분석, 소프트웨어 개발 및 데이터베이스를 중심으로 학습하며 다양한 산업·사회 문제 해결 프로젝트 수행
+
+          - AI·빅데이터 학회 JBIG 회장 역임
+          - ML/DL, 데이터 분석, 풀스택 웹 개발 프로젝트 수행
+          - 교내 AI·SW 경진대회 AI부문 대상, SW 캡스톤디자인 최우수상 수상
 
   # Achievements
   achievements:
@@ -291,89 +281,278 @@ params:
   projects:
     enable: true
     items:
-      - title: "JBIG - 학회 풀스택 플랫폼"
+      - title: "JBIG - 학회 웹서비스 운영·고도화"
         slug: "jbig"
         roles: "Lead, Fullstack"
-        image: /images/projects/jbig.svg
+        image: /pic/jbig.jpg
         emoji: "🌐"
         content: |-
-          전북대학교 AI/빅데이터 학회의 공식 플랫폼. React/TypeScript 프론트엔드와 Django REST API 백엔드, PostgreSQL DB로 구성된 학회 전용 서비스입니다. NCP Object Storage 기반 Presigned URL 업로드, Supabase DB 마이그레이션, Gunicorn/Nginx 배포 환경을 직접 구축했습니다.
+          전북대학교 AI·빅데이터 학회에서 학회장과 웹사이트 풀스택 유지보수를 맡았습니다. React/TypeScript·Django REST API 기반 서비스에서 Supabase(PostgreSQL) 데이터 구조 개편, NCP Object Storage 기반 파일 업로드 구조 구현, 사용자 피드백 기반 기능 개선과 운영 환경 고도화를 수행했습니다.
         badges:
           - "React"
           - "TypeScript"
           - "Django"
           - "PostgreSQL"
+          - "Supabase"
           - "NCP"
         links:
           live: "https://www.jbig.co.kr"
           github: "https://github.com/dev-JBIG"
+          note: "https://www.jbig.co.kr/note"
           pdf: ""
           news: ""
 
-      - title: "ITDA - AI 이동장터 솔루션"
+      - title: "잇다 (ITDA) - AI 기반 이동장터 운영 최적화 플랫폼"
         slug: "itda"
         roles: "AI, Lead, PM"
-        image: /images/projects/itda.svg
+        image: /pic/ITDA.jpg
         emoji: "🚚"
         content: |-
-          식품사막 지역 어르신을 위한 AI 기반 이동장터 운영 시스템. 다차원 데이터 융합 경로 최적화 알고리즘과 마을별 수요 예측 ML 모델, 구매 패턴 기반 위기 징후 탐지 알고리즘을 구현했습니다. 2025 SW융합 해커톤 우수상(대구광역시장상) 수상작.
+          전남 영광군 이동장터 봉사·인터뷰에서 발견한 품절·폐기, 비효율적 경로, 운영 데이터 부재 문제를 AI 기반 운영 최적화 플랫폼으로 구조화했습니다. 수요예측·경로 최적화·재고 추천·Care-CRM·RAG 정책 보고서를 통해 이동장터 운영자의 데이터 기반 의사결정을 지원합니다.
         badges:
-          - "Python"
-          - "ML"
-          - "경로 최적화"
+          - "XGBoost"
+          - "RAG"
         links:
           live: ""
           github: "https://github.com/HaimLee-4869/ITDA"
           pdf: ""
           news: "https://www.youtube.com/live/B3B9QCsW6Ko?si=O71t_CHaQno4Rf7b&t=1620"
 
-      - title: "J-Connect - 지역 가치 발견 플랫폼"
+      - title: "J-Connect - AI 기반 지역소멸 대응·로컬 브랜딩 플랫폼"
         slug: "jconnect"
         roles: "AI, Solo"
-        image: /images/projects/jconnect.svg
+        image: /pic/J-connect.jpg
         emoji: "🗺️"
         content: |-
-          전북 지역 소멸 문제 해결을 위한 RAG 기반 AI 플랫폼. Random Forest 회귀로 정주 유인 지수가 단기 관광 지수보다 3배 더 영향력 있음을 검증했습니다. 공공데이터 임베딩 벡터 DB로 LLM 할루시네이션을 최소화하고, K-Means 클러스터링으로 '나만의 테마 지도'를 구현했습니다.
+          전북 공공데이터를 분석해 단기 관광 중심의 지역 활성화 전략을 재검토하고, 관계인구→생활인구→정주인구로 이어지는 단계별 인구 유입 모델을 설계했습니다. Random Forest·K-Means·RAG를 활용해 지역별 정주 요인 분석, 개인화 로컬 추천, 공공데이터 기반 AI 여행 비서를 프로토타입으로 구현했습니다.
         badges:
-          - "RAG"
+          - "Python"
           - "Random Forest"
           - "K-Means"
-          - "Vector DB"
+          - "RAG"
+          - "LangChain"
         links:
           live: ""
           github: ""
           pdf: ""
-          news: ""
+          news: "https://www.domin.co.kr/news/articleView.html?idxno=1523608"
 
-      - title: "케어내비 - 고령 환자 동행 AI 디바이스"
+      - title: "Care-Navi - 고령환자 병원 스마트 동행 디바이스"
         slug: "carenavi"
         roles: "AI, Lead, IoT"
-        image: /images/projects/carenavi.svg
+        image: /pic/carenavi.jpg
         emoji: "🏥"
         content: |-
-          GPS가 닿지 않는 병원 실내에서 UWB와 WiFi RTT 하이브리드 측위로 정밀 위치 추적. 엘리베이터 대기 시간과 고령자 보행 속도를 가중치로 반영한 다익스트라 알고리즘 직접 구현. NLP 기반 상황 인지 + 정서적 케어 TTS로 '인간적인 동반자' 경험 제공.
+          의료서비스 이용·고령화·병원 규모 데이터를 분석해 고령환자가 대형병원에서 겪는 이동·절차·정보 문제를 구조화했습니다. 실내 경로 안내, 상황별 음성 케어, 환자 이동 데이터 분석의 3단계 솔루션을 설계하고 NetworkX·Dijkstra·gTTS 기반 PoC를 구현했습니다.
         badges:
-          - "UWB"
-          - "다익스트라"
-          - "NLP"
-          - "TTS"
+          - "Python"
         links:
           live: ""
           github: ""
           pdf: ""
           news: ""
 
-      - title: "항만 물류 AI 에이전트"
+      - title: "Port-AX - 지능형 항만 운영 통합 플랫폼"
         slug: "port-ai"
         roles: "AI, Backend"
-        image: /images/projects/port-ai.svg
+        image: /pic/port.jpeg
         emoji: "🚢"
         content: |-
-          CNN+LSTM 앙상블 모델로 장치장 혼잡도 예측 R² 0.999, 물동량 예측 MAPE 2.95% 달성. RAG 기반 항만 규정 자연어 답변 시스템 + AI-OCR 통관 서류 자동 검수로 리드타임 40% 단축. 한국해양진흥공사 사장상 수상작.
+          항만공사 인터뷰를 통해 분산된 데이터, 서류 검수, 규정 검색, 장치장 혼잡 문제를 정의하고 기존 TOS를 교체하지 않는 API 연동형 AX 플랫폼을 설계했습니다. RAG·AI-OCR·CNN+LSTM·앙상블 예측을 결합한 4개 AI 모듈과 통합 대시보드 MVP를 구현했습니다.
         badges:
-          - "CNN+LSTM"
+          - "AX"
           - "RAG"
           - "AI-OCR"
+          - "CNN+LSTM"
+          - "LightGBM"
+          - "FastAPI"
+        links:
+          live: ""
+          github: ""
+          pdf: ""
+          news: "http://www.haesanews.com/news/articleView.html?idxno=144092"
+
+      - title: "CrediWork - AI 기반 고립청년 고용 브릿지 플랫폼"
+        slug: "crediwork"
+        roles: "기획"
+        image: /pic/crediwork.jpg
+        emoji: "🌱"
+        content: |-
+          고립·은둔 청년 인터뷰를 통해 심리 지원 이후 실제 ‘첫 일경험’이 부족한 고용 공백을 문제로 정의했습니다. 기업·공공기관의 디지털 마이크로워크를 비대면 일경험으로 연결하고, 수행 데이터를 C-Score와 직무 포트폴리오로 전환하는 B2G/B2B 고용 브릿지 모델을 설계했습니다.
+        badges:
+          - "B2G/B2B"
+        links:
+          live: ""
+          github: ""
+          pdf: ""
+          news: "https://news.nate.com/view/20251204n22886"
+
+      - title: "Sentinel - 로컬 이벤트 기반 소상공인 마케팅 AI Agent"
+        slug: "sentinel"
+        roles: "Data, Agent"
+        image: /pic/sentinel.jpg
+        emoji: "🛡️"
+        content: |-
+          로컬 이벤트가 실제 소상공인 매출에 미치는 효과를 DiD로 검증하고, 유의한 이벤트·상권 조합을 데이터화했습니다. 이를 RAG와 5개 전문 Agent에 연결해 점주의 질문 의도에 따라 카드·상권·이벤트 데이터를 검색하고, 근거가 명시된 맞춤형 마케팅 실행 전략을 생성하도록 설계했습니다.
+        badges:
+          - "DiD"
+          - "RAG"
+          - "AI Agent"
+        links:
+          live: ""
+          github: ""
+          pdf: ""
+          news: ""
+
+      - title: "SUM:CLIMATE BUOY - 제주 해양 위험 예측·모니터링 플랫폼"
+        slug: "sum-climate-buoy"
+        roles: "Data, AI"
+        image: /pic/jejuaws.jpg
+        emoji: "🌊"
+        content: |-
+          스마트 부표 113만 건과 해양기상·사고 데이터를 시공간 결합해 26개 피처의 학습 데이터셋을 구축하고, XGBoost 기반 해양 위험 예측 모델(Recall 82.7%)을 개발했습니다. AWS Lambda·API Gateway로 예측 API를 배포하고 Sentinel-2 위성 레이어, 통합 대시보드, 위험 알림까지 서비스화했습니다.
+        badges:
+          - "Python"
+          - "XGBoost"
+          - "AWS Lambda"
+          - "API Gateway"
+        links:
+          live: ""
+          github: ""
+          pdf: ""
+          news: ""
+
+      - title: "Mingle-K - 데이터 기반 K리그 팬 성향·소셜 매칭 플랫폼"
+        slug: "mingle-k"
+        roles: "Data, AI, Fullstack"
+        image: /pic/mingle.png
+        emoji: "⚽"
+        content: |-
+          K리그 선수 행동·신체 데이터를 전처리하고 PCA·K-Means로 4개 성향 축을 분석해 16가지 FBTI(Football Type Indicator)를 설계했습니다. 분류 결과를 RAG 기반 AI 코치와 React Native 앱에 연결해 선수 성향 해설, 유사 선수 추천, 팬 매칭까지 제공하는 MVP를 구현했습니다.
+        badges:
+          - "Python"
+          - "PCA"
+          - "K-Means"
+          - "RAG"
+        links:
+          live: ""
+          github: ""
+          pdf: "/pdf/서울시립대_데이터경진대회_-_JBIG.pdf"
+          news: ""
+
+      - title: "BeaverTalk - 실시간 AI 한국어 회화·발음 코칭 앱"
+        slug: "beavertalk"
+        roles: "Flutter Frontend, QA"
+        image: /pic/비버톡.jpeg
+        emoji: "🦫"
+        content: |-
+          외국인 학습자를 위한 실시간 AI 한국어 회화 서비스의 Flutter 프론트엔드·QA를 담당했습니다. Claude Code와 Figma MCP를 연동해 UI 구현을 고도화하고, 통화 API 원가를 분석해 컨텍스트 압축과 파이프라인 분리로 건당 원가를 50% 절감하고 구독당 통화 가능 건수를 14건→95건으로 확대했습니다.
+        badges:
+          - "Flutter"
+          - "Claude Code"
+          - "Figma MCP"
+          - "QA"
+        links:
+          live: ""
+          github: ""
+          pdf: ""
+          news: ""
+
+      - title: "CJ ONE - IFC몰 고객 동선 분석·매출 활성화 전략"
+        slug: "cj-one-ifc-analysis"
+        roles: "Data Intern, Team"
+        image: /pic/cjintern.jpg
+        emoji: "🏬"
+        content: |-
+          CJ ONE 회원 데이터를 기반으로 IFC몰 내 5개 브랜드의 교차 방문과 잠재고객을 분석했습니다. 브랜드 간 이동을 히트맵으로 시각화하고 PCA·군집분석으로 평일·주말 고객을 세분화했으며, 로지스틱 회귀로 회원별 브랜드 방문을 약 80% 예측했습니다. 분석 결과를 시네샵 리뉴얼·콜라보 팝업 등 비즈니스 실행 과제로 연결했습니다.
+        badges:
+          - "Python"
+          - "PCA"
+          - "Clustering"
+          - "Logistic Regression"
+        links:
+          live: ""
+          github: ""
+          pdf: ""
+          news: ""
+
+      - title: "전북 식품사막화 - 고령층 식품 접근성 데이터 분석"
+        slug: "jeonbuk-food-desert"
+        roles: "Data, Team"
+        image: /pic/cj.jpg
+        emoji: "🛒"
+        content: |-
+          전북 14개 시군의 식료품점·교통·고령인구·온라인 접근성 등 공공데이터를 결합해 식품사막화 원인을 분석했습니다. 이상치·다중공선성을 검토해 회귀모형을 조정하고, 진안·임실·무주를 취약지역으로 도출했습니다. 분석 결과를 기존 점포 기반 배달 서비스와 고령층 디지털 교육 프로그램으로 연결했습니다.
+        badges:
+          - "Excel"
+          - "EDA"
+          - "Regression"
+          - "Multicollinearity"
+        links:
+          live: ""
+          github: ""
+          pdf: ""
+          news: ""
+
+      - title: "기후 변화에 따른 미국 옥수수 수확량 예측 & 작물 배분 최적화"
+        slug: "purdue-climate-crop"
+        roles: "Data, ML, Optimization"
+        image: /pic/purdue.png
+        emoji: "🌽"
+        content: |-
+          Purdue PAGE Program에서 1981~2015년 미국 2,644개 카운티의 기후·토양·수확량 데이터를 분석했습니다. 9개 모델을 비교해 LightGBM 공간 교차검증 R² 0.73을 확보하고, 29℃ 이상 극한고온의 영향을 분석했습니다. 이후 ML 예측값을 2,056개 카운티의 작물 배분 최적화 문제로 확장해 GA·SA·TS를 비교하고 전환비용과 기후손실 회복의 trade-off를 분석했습니다.
+        badges:
+          - "Python"
+          - "ML"
+          - "Optimization"
+        links:
+          live: ""
+          github: ""
+          pdf: ""
+          news: ""
+
+      - title: "전북특별자치도 생성형 AI 플랫폼 고도화"
+        slug: "jeonbuk-ai-platform"
+        roles: "Team Lead, Collaborative Editing"
+        image: /pic/도청.jpg
+        emoji: "🏛️"
+        content: |-
+          약 5,000명의 공무원이 사용하는 전북도청 온프레미스 생성형 AI 플랫폼 고도화 프로젝트에서 팀장을 맡았습니다. 도청·소방본부와 요구사항을 조율하고, 한글·엑셀 웹 동시편집 모듈을 담당해 Nextcloud·Yjs·rHWP 기반 협업 구조를 구현했습니다. 공문서 렌더링 오류를 한글 2024와 픽셀 단위로 개선하고 rHWP 본가에 10건의 수정사항을 반영했습니다.
+        badges:
+          - "AX"
+          - "rHWP"
+          - "Open Source"
+        links:
+          live: ""
+          github: ""
+          pdf: ""
+          news: ""
+
+      - title: "RE:PLAY - 장애인 단계별 취업 성장·마이크로태스크 매칭 플랫폼"
+        slug: "replay"
+        roles: "서비스 기획"
+        image: /pic/장애비장애.jpg
+        emoji: "🔁"
+        content: |-
+          장애 청년 32명을 대상으로 취업 과정의 어려움과 업무 선호를 조사하고, ‘완성된 직무에 사람을 맞추는 구조’보다 개인별 역량·작업 조건에 맞는 단계적 경험이 필요하다고 문제를 재정의했습니다. AI 면접 연습→대학생 멘토→마이크로 태스크→R-Score·AI 포트폴리오로 이어지는 4단계 취업 성장 모델과 대학·기업·공공기관을 연결하는 B2B/B2G 서비스 구조를 기획했습니다.
+        badges:
+          - "Service Planning"
+          - "Service Design"
+        links:
+          live: ""
+          github: ""
+          pdf: ""
+          news: ""
+
+      - title: "AI Action Router - 경량 AI Agent 라우팅 모델"
+        slug: "ai-action-router"
+        image: /pic/swai.jpg
+        emoji: "🤖"
+        content: |-
+          자연어 요청을 30개 AI Agent 행동 중 하나로 분류하는 라우팅 모델을 개발했습니다. 문제 구조를 분석해 30-class 분류를 후보 3개 내 선택 문제로 재정의하고, KoELECTRA·RoBERTa 등과 경량 모델을 비교했습니다. 최종적으로 TF-IDF+Logistic Regression과 candidate masking·추론 최적화를 적용해 Final Score 95.30, Hidden Macro F1 0.892로 전체 1위를 기록했습니다.
+        badges:
+          - "Python"
+          - "ML"
         links:
           live: ""
           github: ""

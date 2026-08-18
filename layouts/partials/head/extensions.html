@@ -6,6 +6,8 @@
   --pink-base: #f4a4c4;
   --pink-hover: #e879a3;
   --pink-deep: #c2185b;
+  --pink-soft: #fff1f6;
+  --pink-border: #f5d4e1;
   --font-kr: 'Pretendard', 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
 }
 
@@ -33,7 +35,7 @@ html, body {
 }
 
 /* ============================================
-   ⭐⭐⭐⭐ Hero 고양이 흔들림 fix
+   Hero 나비 로고 floating animation
    - 컨테이너 높이를 고정하고 그 안에서 transform만 적용
    - 부모 layout이 고양이 위치 변화에 영향 받지 않도록
    ============================================ */
@@ -42,7 +44,7 @@ html, body {
   position: relative !important;
   display: flex !important;
   align-items: center !important;
-  justify-content: center !important;
+  justify-content: flex-end !important;
   /* 고양이 + 둥둥 여유 공간(±15px) 합쳐서 충분히 큰 박스 */
   min-height: 480px !important;
   overflow: visible !important;
@@ -58,6 +60,13 @@ html, body {
   /* contain으로 layout 격리 (이게 핵심!) */
   contain: layout style !important;
   animation: floatCat 3.5s ease-in-out infinite !important;
+  width: min(314px, 78vw) !important;
+  height: auto !important;
+  max-height: 320px !important;
+  object-fit: contain !important;
+  position: relative !important;
+  right: -96px !important;
+  top: -88px !important;
 }
 #hero .image img:hover {
   box-shadow: none !important;
@@ -72,8 +81,21 @@ html, body {
 /* 작은 화면(분할창 포함)에서는 컨테이너 크기 조정 */
 @media (max-width: 991px) {
   #hero .image {
-    min-height: 360px !important;
+    min-height: 300px !important;
+    justify-content: center !important;
   }
+  #hero .image img { right: -12px !important; top: -12px !important; }
+}
+
+#hero .content {
+  max-width: 680px;
+  line-height: 1.75 !important;
+}
+
+@media (max-width: 576px) {
+  #hero .image { min-height: 230px !important; }
+  #hero .image img { width: min(240px, 70vw) !important; right: 0 !important; top: -8px !important; }
+  #hero .content { font-size: 0.96rem !important; }
 }
 
 /* ============================================
@@ -153,15 +175,15 @@ footer #recent-posts {
   border-radius: 24px !important;
   border: none !important;
   box-shadow: 
-    0 0 0 3px var(--pink-base),
-    0 20px 50px -15px rgba(232, 121, 163, 0.35) !important;
+    0 0 0 1px var(--pink-base),
+    0 20px 50px -15px rgba(60, 20, 28, 0.18) !important;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 #about .image img:hover {
   transform: scale(1.03);
   box-shadow: 
-    0 0 0 3px var(--pink-hover),
-    0 25px 60px -15px rgba(232, 121, 163, 0.5) !important;
+    0 0 0 1px var(--pink-hover),
+    0 25px 60px -15px rgba(60, 20, 28, 0.22) !important;
 }
 @media (max-width: 768px) {
   #about .image img { width: 200px !important; height: 267px !important; }
@@ -187,12 +209,12 @@ footer #recent-posts {
 #experience .nav-pills .nav-link:hover,
 #experience .nav-tabs .nav-link:hover {
   color: var(--pink-deep) !important;
-  background: rgba(244, 164, 196, 0.08) !important;
+  background: rgba(229, 139, 170, 0.12) !important;
 }
 #experience .nav-pills .nav-link.active,
 #experience .nav-tabs .nav-link.active {
   color: var(--pink-deep) !important;
-  background: rgba(244, 164, 196, 0.15) !important;
+  background: rgba(229, 139, 170, 0.12) !important;
   font-weight: 600 !important;
   border-bottom: 2px solid var(--pink-base) !important;
 }
@@ -200,7 +222,7 @@ footer #recent-posts {
   padding: 36px 40px !important;
   background: #ffffff !important;
   border-radius: 16px !important;
-  box-shadow: 0 4px 24px -8px rgba(232, 121, 163, 0.18) !important;
+  box-shadow: 0 4px 24px -8px rgba(60, 20, 28, 0.14) !important;
   margin-left: 8px !important;
 }
 #experience .tab-content h3,
@@ -236,8 +258,96 @@ footer #recent-posts {
 #experience .tab-content strong {
   color: #1a1a1a !important;
   font-weight: 600 !important;
-  background: linear-gradient(180deg, transparent 60%, rgba(244, 164, 196, 0.25) 60%);
+  background: linear-gradient(180deg, transparent 60%, rgba(229, 139, 170, 0.18) 60%);
   padding: 0 2px;
+}
+
+/* Experience: 지정 순서의 타임라인과 작은 역량 badge */
+#experience .experience-list {
+  position: relative;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#experience .experience-list::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 6px;
+  width: 2px;
+  background: rgba(229, 139, 170, 0.18);
+}
+#experience .experience-item {
+  position: relative;
+  padding: 0 0 34px 36px;
+}
+#experience .experience-marker {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border: 3px solid var(--pink-base);
+  border-radius: 50%;
+  background: #fff;
+}
+#experience .experience-card {
+  padding: 26px 30px;
+  border: 1px solid var(--pink-border);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 6px 24px -12px rgba(60, 20, 28, 0.18);
+}
+#experience .experience-company {
+  margin: 0 0 9px;
+  color: #1a1a1a;
+  font-size: 1.22rem;
+  font-weight: 700;
+}
+#experience .experience-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 14px;
+  margin-bottom: 14px;
+}
+#experience .experience-role { color: #3a3a3a; font-weight: 600; }
+#experience .experience-date { color: #6b6b6b; font-size: 0.88rem; }
+#experience .experience-description p {
+  margin: 0 !important;
+  color: #3a3a3a !important;
+  font-size: 0.95rem !important;
+  line-height: 1.78 !important;
+}
+#experience .experience-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 17px;
+}
+#experience .experience-badge {
+  display: inline-flex;
+  padding: 5px 10px;
+  border: 1px solid var(--pink-border);
+  border-radius: 9px;
+  background: var(--pink-soft);
+  color: var(--pink-deep);
+  font-size: 0.76rem;
+  font-weight: 550;
+  line-height: 1.2;
+}
+
+#about .content p { margin-bottom: 1.15rem !important; line-height: 1.75 !important; }
+#education .education-content ul { margin-top: 1rem; padding-left: 1.2rem; }
+#education .education-content li { margin-bottom: 0.45rem; line-height: 1.65; }
+#education .education-content li::marker { color: var(--pink-base); }
+
+@media (max-width: 576px) {
+  #experience .experience-item { padding-left: 27px; padding-bottom: 24px; }
+  #experience .experience-card { padding: 21px 19px; }
+  #experience .experience-meta { display: block; }
+  #experience .experience-date { display: block; margin-top: 4px; }
 }
 
 /* ============================================
@@ -250,13 +360,13 @@ footer #recent-posts {
   border: none !important;
   border-radius: 18px !important;
   overflow: hidden !important;
-  box-shadow: 0 4px 24px -6px rgba(232, 121, 163, 0.15) !important;
+  box-shadow: 0 4px 24px -6px rgba(60, 20, 28, 0.12) !important;
   transition: transform 0.35s ease, box-shadow 0.35s ease !important;
   background: #ffffff !important;
 }
 .card:hover {
   transform: translateY(-8px) !important;
-  box-shadow: 0 16px 40px -10px rgba(232, 121, 163, 0.3) !important;
+  box-shadow: 0 16px 40px -10px rgba(60, 20, 28, 0.18) !important;
 }
 .card img,
 .card-img-top {
@@ -264,7 +374,7 @@ footer #recent-posts {
   height: 220px !important;
   object-fit: cover !important;
   border-radius: 0 !important;
-  background: linear-gradient(135deg, #fce4ec 0%, #f4a4c4 100%);
+  background: linear-gradient(135deg, #fff7fa 0%, #f3bfd1 100%);
 }
 .card-body { padding: 24px 26px !important; }
 .card-body h3,
@@ -284,7 +394,7 @@ footer #recent-posts {
   line-height: 1.65 !important;
 }
 .badge {
-  background: rgba(244, 164, 196, 0.15) !important;
+  background: var(--pink-soft) !important;
   color: var(--pink-deep) !important;
   font-weight: 500 !important;
   font-size: 0.78rem !important;
@@ -323,37 +433,6 @@ footer #recent-posts {
 @keyframes blink {
   0%, 50% { opacity: 1; }
   51%, 100% { opacity: 0; }
-}
-
-/* 하트 커서 */
-#pink-cursor {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  width: 32px;
-  height: 32px;
-  pointer-events: none !important;
-  z-index: 9999 !important;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s, height 0.3s;
-  opacity: 0;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-#pink-cursor svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-  background: transparent !important;
-  overflow: visible !important;
-}
-#pink-cursor svg path { transition: fill 0.3s; }
-#pink-cursor.visible { opacity: 1; }
-#pink-cursor.hover { width: 46px; height: 46px; }
-#pink-cursor.hover svg path { fill: var(--pink-hover); }
-@media (hover: none) and (pointer: coarse) {
-  #pink-cursor { display: none !important; }
 }
 
 /* ============================================
@@ -443,7 +522,7 @@ footer #recent-posts {
   display: inline-block !important;
   color: #ffffff !important;
   background: var(--pink-hover) !important;
-  background-color: #e879a3 !important;
+  background-color: var(--pink-hover) !important;
   font-size: 0.78rem !important;
   font-weight: 600 !important;
   text-decoration: none !important;
@@ -459,7 +538,7 @@ footer #recent-posts {
 .more-btn:focus,
 .more-btn:active {
   background: var(--pink-deep) !important;
-  background-color: #c2185b !important;
+  background-color: var(--pink-deep) !important;
   color: #ffffff !important;
   transform: translateX(2px);
   text-decoration: none !important;
@@ -473,13 +552,13 @@ footer #recent-posts {
   border-radius: 14px;
   overflow: hidden;
   border: 2px solid var(--pink-base);
-  box-shadow: 0 6px 20px -8px rgba(232, 121, 163, 0.25);
+  box-shadow: 0 6px 20px -8px rgba(60, 20, 28, 0.16);
   background: #fafafa;
   position: relative;
 }
 
 .embed-preview-label {
-  background: rgba(244, 164, 196, 0.15);
+  background: var(--pink-soft);
   color: var(--pink-deep);
   font-size: 0.85rem;
   font-weight: 600;
@@ -551,7 +630,7 @@ footer #recent-posts {
 }
 
 .role-badge-detail {
-  background: rgba(244, 164, 196, 0.2);
+  background: rgba(229, 139, 170, 0.16);
   color: var(--pink-deep);
   font-size: 0.78rem;
   font-weight: 600;
@@ -571,7 +650,7 @@ footer #recent-posts {
 .detail-hero-image {
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 8px 32px -8px rgba(232, 121, 163, 0.25);
+  box-shadow: 0 8px 32px -8px rgba(60, 20, 28, 0.16);
 }
 
 .detail-hero-image img {
@@ -608,11 +687,11 @@ footer #recent-posts {
 .detail-content strong {
   color: var(--pink-deep);
   font-weight: 600;
-  background: linear-gradient(180deg, transparent 60%, rgba(244, 164, 196, 0.25) 60%);
+  background: linear-gradient(180deg, transparent 60%, rgba(229, 139, 170, 0.18) 60%);
   padding: 0 2px;
 }
 .detail-content code {
-  background: rgba(244, 164, 196, 0.1);
+  background: var(--pink-soft);
   color: var(--pink-deep);
   padding: 2px 8px;
   border-radius: 6px;
@@ -643,7 +722,7 @@ footer #recent-posts {
   background: var(--pink-base);
   color: white !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px -4px rgba(232, 121, 163, 0.4);
+  box-shadow: 0 6px 16px -4px rgba(60, 20, 28, 0.20);
 }
 
 .back-btn-bottom {
@@ -664,6 +743,146 @@ footer #recent-posts {
   transform: translateX(-3px);
 }
 
+/* 2·3차 통합 보완: 헤더 브랜드 */
+#profileHeader .navbar-brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: var(--pink-hover) !important;
+  font-weight: 700 !important;
+}
+#profileHeader .navbar-brand img {
+  width: 34px !important;
+  height: 26px !important;
+  object-fit: contain !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+/* About: 기술 목록 제거 후 문단형 소개의 간격과 정렬 */
+#about .row { align-items: center !important; }
+#about .content p { margin-bottom: 1.2rem !important; line-height: 1.78 !important; }
+#about .content p:last-child { margin-bottom: 0 !important; }
+
+/* Experience: 세로 인덱스 + 오른쪽 단일 상세 */
+#experience { padding: 80px 0 !important; }
+#experience .experience-browser {
+  display: grid;
+  grid-template-columns: minmax(220px, 31%) 1fr;
+  max-width: 1080px;
+  min-height: 315px;
+  margin-inline: auto;
+  gap: 24px;
+}
+#experience .experience-index { display: flex; gap: 6px; }
+#experience .experience-index { flex-direction: column; }
+#experience .experience-index-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 12px 15px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  background: transparent;
+  color: #666;
+  font-size: .88rem;
+  line-height: 1.35;
+  text-align: left;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+#experience .experience-index-button:hover { background: #fff8fa; color: var(--pink-deep); }
+#experience .experience-index-button.active {
+  border-color: var(--pink-border);
+  background: var(--pink-soft);
+  color: var(--pink-deep);
+  font-weight: 650;
+}
+#experience .experience-index-button:focus-visible { outline: 2px solid var(--pink-base); outline-offset: 2px; }
+#experience .experience-index-number { color: var(--pink-base); font-size: .72rem; font-weight: 700; }
+#experience .experience-details { min-width: 0; }
+#experience .experience-panel {
+  height: 100%;
+  padding: 30px 34px;
+  border: 1px solid #f7e6ec;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 10px 32px -18px rgba(119, 67, 87, .24);
+}
+#experience .experience-highlight {
+  padding: 0 .06em .05em;
+  background: linear-gradient(180deg, transparent 68%, rgba(244, 164, 196, .28) 68%);
+  border-bottom: 1px solid rgba(232, 121, 163, .48);
+  font-weight: 600;
+  color: #2d2d2d;
+}
+#experience .experience-badge {
+  border-color: var(--pink-border) !important;
+  background: var(--pink-soft) !important;
+  color: var(--pink-deep) !important;
+}
+
+/* Education: 테마의 회색 border/shadow와 자식 배경색을 명시적으로 해제 */
+#education .container .card {
+  border: 1px solid var(--pink-border) !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .04) !important;
+  transition: transform .35s ease, box-shadow .35s ease, border-color .25s ease !important;
+}
+#education .container .card .card-body {
+  background-color: #ffffff !important;
+}
+#education .container .card .card-body * {
+  background-color: transparent !important;
+}
+#education .container .card::before,
+#education .container .card::after {
+  content: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+#education .container .card:hover,
+#education .container .card:focus,
+#education .container .card:focus-within {
+  border: 1px solid var(--pink-base) !important;
+  outline: none !important;
+  box-shadow: 0 10px 26px rgba(244, 164, 196, .16) !important;
+}
+#education .education-content ul {
+  margin-bottom: 0 !important;
+}
+#education .education-more {
+  margin-top: 10px !important;
+  padding-top: 0 !important;
+  border-top: 0 !important;
+  color: #777;
+  font-size: .84rem;
+  line-height: 1.6;
+}
+#education .education-more a {
+  color: var(--pink-base) !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+#education .education-more a:hover,
+#education .education-more a:focus { color: var(--pink-hover) !important; }
+
+@media (max-width: 576px) {
+  #experience { padding: 64px 0 !important; }
+  #experience .experience-browser { grid-template-columns: 1fr; min-height: 0; gap: 14px; }
+  #experience .experience-index {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 7px;
+  }
+  #experience .experience-index-button { flex: 0 0 auto; white-space: nowrap; padding: 10px 13px; }
+  #experience .experience-panel { padding: 23px 20px; }
+}
+
 </style>
 
 <script>
@@ -674,11 +893,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var c = getComputedStyle(document.documentElement).getPropertyValue('--pink-hover').trim();
     return c || '#e879a3';
   }
-  function getPinkBase() {
-    var c = getComputedStyle(document.documentElement).getPropertyValue('--pink-base').trim();
-    return c || '#f4a4c4';
-  }
-  
   // ===== ⭐ 홈 페이지 식별: body에 클래스 추가 =====
   // 홈은 path가 "/"이거나 "/index.html"
   var path = window.location.pathname;
@@ -792,7 +1006,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var elements = heroSection.querySelectorAll('h1, h2, h3, h4, p, span, div');
     for (var i = 0; i < elements.length; i++) {
       var el = elements[i];
-      if (el.children.length === 0 && el.textContent.trim() === 'I build things for the web') {
+      if (el.children.length === 0 && el.textContent.trim() === 'From data to action.') {
         return el;
       }
     }
@@ -832,52 +1046,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     setTimeout(startTyping, 500);
-  }
-  
-  // ===== 2. 하트 커서 =====
-  if (!isTouch) {
-    var cursor = document.createElement('div');
-    cursor.id = 'pink-cursor';
-    cursor.innerHTML = '<svg viewBox="0 0 100 92" xmlns="http://www.w3.org/2000/svg"><path d="M50,90 C20,70 0,50 0,28 C0,12 12,0 28,0 C38,0 46,8 50,16 C54,8 62,0 72,0 C88,0 100,12 100,28 C100,50 80,70 50,90 Z" fill="' + getPinkBase() + '"/></svg>';
-    document.body.appendChild(cursor);
-    
-    var mouseX = 0, mouseY = 0;
-    var cursorX = 0, cursorY = 0;
-    var visible = false;
-    
-    document.addEventListener('mousemove', function(e) {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      if (!visible) {
-        cursor.classList.add('visible');
-        visible = true;
-      }
-    });
-    
-    document.addEventListener('mouseleave', function() {
-      cursor.classList.remove('visible');
-      visible = false;
-    });
-    
-    function animateCursor() {
-      cursorX += (mouseX - cursorX) * 0.15;
-      cursorY += (mouseY - cursorY) * 0.15;
-      cursor.style.left = cursorX + 'px';
-      cursor.style.top = cursorY + 'px';
-      requestAnimationFrame(animateCursor);
-    }
-    animateCursor();
-    
-    document.addEventListener('mouseover', function(e) {
-      if (e.target.closest('a, button, input, textarea, select, .btn, [role="button"], .card')) {
-        cursor.classList.add('hover');
-      }
-    });
-    document.addEventListener('mouseout', function(e) {
-      if (e.target.closest('a, button, input, textarea, select, .btn, [role="button"], .card')) {
-        cursor.classList.remove('hover');
-      }
-    });
   }
   
   // ===== ⭐ 카드 전체 클릭 시 상세 페이지로 이동 =====

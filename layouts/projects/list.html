@@ -41,13 +41,15 @@
             <div class="link-buttons">
               {{ if $links }}
                 {{ $live := index $links "live" }}
-                {{ if $live }}<a href="{{ $live }}" target="_blank" rel="noopener" class="link-btn">Live Site</a>{{ end }}
+                {{ if $live }}<a href="{{ $live }}" target="_blank" rel="{{ if or (eq $slug "sentinel") (eq $slug "sum-climate-buoy") }}noopener noreferrer{{ else }}noopener{{ end }}" class="link-btn">Live Site</a>{{ end }}
                 {{ $gh := index $links "github" }}
                 {{ if $gh }}<a href="{{ $gh }}" target="_blank" rel="noopener" class="link-btn">GitHub</a>{{ end }}
+                {{ $note := index $links "note" }}
+                {{ if $note }}<a href="{{ $note }}" target="_blank" rel="noopener noreferrer" class="link-btn">자체 제작 교안</a>{{ end }}
                 {{ $pdf := index $links "pdf" }}
-                {{ if $pdf }}<a href="{{ $pdf }}" target="_blank" rel="noopener" class="link-btn">발표자료</a>{{ end }}
+                {{ if $pdf }}<a href="{{ $pdf }}" target="_blank" rel="{{ if eq $slug "mingle-k" }}noopener noreferrer{{ else }}noopener{{ end }}" class="link-btn">{{ if eq $slug "mingle-k" }}PDF{{ else }}발표자료{{ end }}</a>{{ end }}
                 {{ $news := index $links "news" }}
-                {{ if $news }}<a href="{{ $news }}" target="_blank" rel="noopener" class="link-btn">언론보도</a>{{ end }}
+                {{ if $news }}<a href="{{ $news }}" target="_blank" rel="{{ if or (eq $slug "port-ai") (eq $slug "crediwork") }}noopener noreferrer{{ else }}noopener{{ end }}" class="link-btn">언론보도</a>{{ end }}
               {{ end }}
             </div>
             <a href="{{ $detailPath | absURL }}" class="more-btn">더보기 →</a>

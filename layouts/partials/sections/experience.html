@@ -1,0 +1,86 @@
+{{ if .Site.Params.experience.enable | default false }}
+<section id="experience" class="py-5">
+  <div class="container">
+    <h3 class="text-center">Experience</h3>
+
+    <div class="experience-browser mt-5">
+      <div class="experience-index" role="tablist" aria-label="경험 목록">
+        {{ range $index, $item := .Site.Params.experience.items }}
+        <button type="button"
+          id="experience-tab-{{ $index }}"
+          class="experience-index-button{{ if eq $index 0 }} active{{ end }}"
+          data-experience-index="{{ $index }}"
+          role="tab"
+          aria-controls="experience-panel-{{ $index }}"
+          aria-selected="{{ if eq $index 0 }}true{{ else }}false{{ end }}"
+          tabindex="{{ if eq $index 0 }}0{{ else }}-1{{ end }}">
+          <span class="experience-index-number">{{ printf "%02d" (add $index 1) }}</span>
+          <span>{{ $item.company }}</span>
+        </button>
+        {{ end }}
+      </div>
+
+      <div class="experience-details">
+        {{ range $index, $item := .Site.Params.experience.items }}
+        <article id="experience-panel-{{ $index }}"
+          class="experience-panel{{ if eq $index 0 }} active{{ end }}"
+          data-experience-panel="{{ $index }}"
+          role="tabpanel"
+          aria-labelledby="experience-tab-{{ $index }}"
+          {{ if ne $index 0 }}hidden{{ end }}>
+          <h4 class="experience-company">{{ $item.company }}</h4>
+          {{ range $item.jobs }}
+          <div class="experience-meta">
+            <span class="experience-role">{{ .name }}</span>
+            {{ with .date }}<span class="experience-date">{{ . }}</span>{{ end }}
+          </div>
+          <div class="experience-description">{{ .content | markdownify }}</div>
+          {{ with .keywords }}
+          <div class="experience-keywords" aria-label="기술 및 역량 키워드">
+            {{ range . }}<span class="experience-badge">{{ . }}</span>{{ end }}
+          </div>
+          {{ end }}
+          {{ end }}
+        </article>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var section = document.getElementById('experience');
+  if (!section) return;
+
+  var indexButtons = Array.from(section.querySelectorAll('[data-experience-index]'));
+  var panels = Array.from(section.querySelectorAll('[data-experience-panel]'));
+
+  function selectExperience(index, focusButton) {
+    indexButtons.forEach(function (button) {
+      var selected = button.dataset.experienceIndex === index;
+      button.classList.toggle('active', selected);
+      button.setAttribute('aria-selected', String(selected));
+      button.tabIndex = selected ? 0 : -1;
+      if (selected && focusButton) button.focus();
+    });
+    panels.forEach(function (panel) {
+      var selected = panel.dataset.experiencePanel === index;
+      panel.classList.toggle('active', selected);
+      panel.hidden = !selected;
+    });
+  }
+
+  indexButtons.forEach(function (button, buttonIndex) {
+    button.addEventListener('click', function () { selectExperience(button.dataset.experienceIndex, false); });
+    button.addEventListener('keydown', function (event) {
+      if (event.key !== 'ArrowRight' && event.key !== 'ArrowDown' && event.key !== 'ArrowLeft' && event.key !== 'ArrowUp') return;
+      event.preventDefault();
+      var direction = event.key === 'ArrowRight' || event.key === 'ArrowDown' ? 1 : -1;
+      var next = (buttonIndex + direction + indexButtons.length) % indexButtons.length;
+      selectExperience(indexButtons[next].dataset.experienceIndex, true);
+    });
+  });
+});
+</script>
+{{ end }}
