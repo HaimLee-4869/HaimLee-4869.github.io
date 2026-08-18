@@ -208,74 +208,145 @@ params:
   achievements:
     enable: true
     items:
-      - title: "🏆 제주 AWS 글로벌 스페이스 챌린지 해커톤 - 최우수상"
-        image: /images/projects/achievement.svg
-        content: "AWS 공공부문 대표상 / 위성 관측 데이터와 스마트 부표를 융합한 해양 기후 모니터링 솔루션 'SUM:CLIMATE BUOY' (2026)"
+      - title: "2026 JBNU AI·SW 경진대회 - AI부문 대상"
+        kicker: "🏆 대상"
+        content: "전북대학교 총장상 / 자연어 요청을 분석해 후보 행동 중 AI Agent가 수행할 최적 행동을 선택하는 경량 라우팅 모델"
+        project: "AI Action Router - 경량 AI Agent 라우팅 모델"
+        href: "/projects/ai-action-router/"
 
-      - title: "🏆 2026 지역 창업 솔버톤 대회 - 우수상"
-        image: /images/projects/achievement.svg
-        content: "서울대학교 총장상 / 친환경 부표 '머쉬부이' + 해양 데이터 플랫폼 '섬부이' (서울대·전북대·UNIST·포스텍 등 12개 기관 주관)"
+      - title: "2026학년도 1학기 SW 캡스톤디자인 경진대회 - 최우수상"
+        kicker: "🏆 최우수상 · 🎖️ 표창"
+        content: "전북특별자치도지사 표창 / 실제 공무원이 사용하는 온프레미스 생성형 AI 플랫폼 고도화 및 한글·엑셀 웹 동시편집"
+        project: "전북특별자치도 생성형 AI 플랫폼 고도화"
+        href: "/projects/jeonbuk-ai-platform/"
 
-      - title: "🏆 제27회 아이디어 유니버시아드 - 최우수상"
-        image: /images/projects/achievement.svg
-        content: "이데일리 회장상 / 고립·은둔 청년을 위한 AI 직무 역량 평가 플랫폼 (이데일리, KG에듀원 주관)"
+      - title: "제주 AWS 글로벌 스페이스 챌린지 해커톤 - 최우수상"
+        kicker: "🏆 최우수상"
+        content: "AWS 공공부문 대표상 / 스마트 부표 113만 건과 해양기상 데이터를 활용한 해양 위험 예측·모니터링 플랫폼"
+        project: "SUM:CLIMATE BUOY - 제주 해양 위험 예측·모니터링 플랫폼"
+        href: "/projects/sum-climate-buoy/"
 
-      - title: "🏆 2025 전주ICT이노베이션스퀘어 디지털 신기술 아이디어 공모전 - 최우수상"
-        image: /images/projects/achievement.svg
-        content: "전주정보문화산업진흥원장상 / 고령 환자 동행 AI 디바이스 '케어내비' (UWB+WiFi RTT 하이브리드 측위, 가중치 다익스트라)"
+      - title: "2025 해운·항만·물류 AX 혁신 아이디어 공모전 - 우수상"
+        kicker: "🥈 우수상"
+        content: "한국해양진흥공사 사장상 / 기존 TOS를 유지하며 RAG·AI-OCR·혼잡도·물동량 예측을 확장한 지능형 항만 운영 플랫폼"
+        project: "Port-AX - 지능형 항만 운영 통합 플랫폼"
+        href: "/projects/port-ai/"
 
-      - title: "🥈 2025 전북특별자치도 공공데이터 활용 창업경진대회 - 우수상"
-        image: /images/projects/achievement.svg
-        content: "전북테크노파크원장상 / RAG 기반 지역 가치 발견 플랫폼 'J-Connect' (Random Forest 인구 이동 분석)"
+      - title: "2025년 제12회 대한민국 SW융합 해커톤 대회 - 우수상"
+        kicker: "🥈 우수상"
+        content: "대구광역시장상 / 식품사막화 지역의 수요예측·경로 최적화·재고 추천을 연결한 AI 이동장터 운영 플랫폼"
+        project: "잇다 (ITDA) - AI 기반 이동장터 운영 최적화 플랫폼"
+        href: "/projects/itda/"
 
-      - title: "🥈 2025 제12회 대한민국 SW융합 해커톤 - 우수상"
-        image: /images/projects/achievement.svg
-        content: "대구광역시장상 / 식품사막 해소를 위한 AI 이동장터 솔루션 'ITDA' (과기정통부, NIPA 주관)"
+      - title: "제13회 빅콘테스트 (2025 AI/데이터 경진대회) - 장려상"
+        kicker: "🥉 장려상"
+        content: "DiD로 로컬 이벤트의 매출 효과를 검증하고 5개 전문 AI Agent로 마케팅 실행안을 생성하는 서비스"
+        project: "Sentinel - 로컬 이벤트 기반 소상공인 마케팅 AI Agent"
+        href: "/projects/sentinel/"
 
-      - title: "🥈 2025 해운 항만 물류 AX 혁신 아이디어 공모전 - 우수상"
-        image: /images/projects/achievement.svg
-        content: "한국해양진흥공사 사장상 / CNN+LSTM 앙상블 항만 혼잡도 예측 (R² 0.999, MAPE 2.95%)"
+      - title: "2026년 전북특별자치도 공공데이터 활용 창업경진대회 - 최우수상"
+        kicker: "🏆 최우수상"
+        content: "외국인 학습자가 AI 캐릭터와 실시간 음성 통화하며 한국어 회화·발음을 연습하고 분석·복습까지 이어가는 AI 학습 앱"
+        project: "BeaverTalk - 실시간 AI 한국어 회화·발음 코칭 앱"
+        href: "/projects/beavertalk/"
 
-      - title: "🥈 2026 제5회 장애·비장애 대학생 창업경진대회 - 우수상"
-        image: /images/projects/achievement.svg
-        content: "한경국립대 총장상 / 뇌병변·지적장애인을 위한 취업 지원 서비스"
+      - title: "2025년 전북특별자치도 공공데이터 활용 창업경진대회 - 우수상"
+        kicker: "🥈 우수상"
+        content: "전북테크노파크원장상 / AI 기반 지역 가치 발견과 관계인구→생활인구→정주인구로 이어지는 단계별 인구 유입 활성화 플랫폼"
+        project: "J-Connect - AI 기반 지역소멸 대응·로컬 브랜딩 플랫폼"
+        href: "/projects/jconnect/"
 
-      - title: "🥉 K리그-서울시립대 공개 AI 경진대회 - 동상"
-        image: /images/projects/achievement.svg
-        content: "K-Means 기반 16가지 축구 성향 분석 + Gemini 2.5 Flash 캐릭터 카드 생성 앱 'Mingle-K'"
+      - title: "2025 전주ICT이노베이션스퀘어 디지털 신기술 아이디어 공모전 - 최우수상"
+        kicker: "🏆 최우수상"
+        content: "전주정보문화산업진흥원장상 / 고령환자의 복잡한 병원 이용 경험을 개선하는 AI 기반 스마트 동행 디바이스 기획"
+        project: "Care-Navi - 고령환자 병원 스마트 동행 디바이스"
+        href: "/projects/carenavi/"
 
-      - title: "🎖️ 제13회 빅콘테스트 (AI/데이터 경진대회) - 장려상"
-        image: /images/projects/achievement.svg
-        content: "운영위원회 위원장상 / 소상공인을 위한 Multi-Agent + RAG 마케팅 전략 추천 시스템 (이중차분법 검증)"
+      - title: "2026 제5회 장애·비장애 대학생 창업경진대회 - 우수상"
+        kicker: "🥈 우수상"
+        content: "AI 기반 단계별 성장과 맞춤형 Micro-task 매칭으로 취업 경험을 설계하는 장애 청년 취업 서비스 기획"
+        project: "RE:PLAY - 장애인 단계별 취업 성장·마이크로태스크 매칭 플랫폼"
+        href: "/projects/replay/"
 
-      - title: "🎓 KT 에이블스쿨 - 3관왕"
-        image: /images/projects/achievement.svg
-        content: "우수 수료생 + 우수 기자단 + 빅프로젝트 우수상"
+      - title: "K-리그 서울시립대 공개 AI 경진대회 - 동상"
+        kicker: "🥉 동상"
+        content: "K리그 선수·팬 성향을 데이터로 분석하고 소셜 매칭과 캐릭터 카드로 연결한 팬 플랫폼"
+        project: "Mingle-K - 데이터 기반 K리그 팬 성향·소셜 매칭 플랫폼"
+        href: "/projects/mingle-k/"
+
+      - title: "제27회 아이디어 유니버시아드 대회 - AI초의존시대 - 최우수상"
+        kicker: "🏆 최우수상"
+        content: "고립청년의 Micro-work 수행 데이터를 C-Score와 직무 포트폴리오로 전환하는 AI 기반 고용 브릿지 플랫폼 기획"
+        project: "CrediWork - AI 기반 고립청년 고용 브릿지 플랫폼"
+        href: "/projects/crediwork/"
 
   # Activities (대외활동) - 별도 페이지에서만 사용
   activities:
     enable: true
     items:
-      - title: "전북대학교 AI/빅데이터 학회 JBIG"
-        period: "2023 - 현재"
-        role: "회장 (2024 - 현재)"
-        image: /images/projects/achievement.svg
-        content: "ML/DL 커리큘럼 기획·운영, 풀스택 홈페이지 유지보수, 우수 지프지기상 수상"
-      - title: "KT 에이블스쿨 부트캠프"
-        period: "2024 - 2025"
-        role: "AI 트랙 수강생"
-        image: /images/projects/achievement.svg
-        content: "전북대 지역인재 전형 선발, 우수 수료생 / 우수 기자단 / 빅프로젝트 우수상 3관왕"
-      - title: "(예시) 전주국제영화제 봉사활동"
-        period: "기간을 작성하세요"
-        role: "역할"
-        image: /images/projects/achievement.svg
-        content: "활동 내용을 작성하세요. 이 항목들은 예시이니 본인 활동으로 교체하세요."
-      - title: "(예시) 교육봉사"
-        period: "기간"
-        role: "봉사자"
-        image: /images/projects/achievement.svg
-        content: "활동 내용 placeholder"
+      - title: "제26회 전주국제영화제 자원활동"
+        slug: "jeonju-film-festival"
+        period: "2025"
+        role: "지프지기 · 전주프로젝트 비즈니스미팅 안내"
+        category: "Film Festival"
+        icon: "fa-solid fa-film"
+        content: "국내외 영화 관계자의 비즈니스미팅 일정·동선을 조율하고 현장 변동에 대응해 우수 지프지기로 선정"
+
+      - title: "삼성드림클래스"
+        slug: "samsung-dream-class"
+        period: "2024.09 ~ 2025.02"
+        role: "대학생 멘토 · 중학생 학습·진로 멘토링"
+        category: "Mentoring"
+        icon: "fa-solid fa-graduation-cap"
+        content: "전주 지역 중학생 10명을 대상으로 주 1회 학습·진로 멘토링 진행"
+
+      - title: "호남ICT이노베이션스퀘어 우수성과자 국외연수"
+        slug: "honam-ict-global-program"
+        period: "2025.11"
+        role: "공모전 우수성과자 연수"
+        category: "Global Program"
+        icon: "fa-solid fa-plane-departure"
+        content: "우수 성과자로 선발되어 중국 AI·IT·창업 생태계 탐방"
+
+      - title: "Purdue University PAGE South Korea Summer Program"
+        slug: "purdue-page-program"
+        period: "2026.06 - 07"
+        role: "Program Participant · Machine Learning & Optimization"
+        category: "Global Education"
+        icon: "fa-solid fa-building-columns"
+        content: "Purdue 대학교에서 머신러닝/최적화 학습"
+
+      - title: "전북대학교 재학생-재학생 멘토링"
+        slug: "jbnu-peer-mentoring"
+        period: "2026"
+        role: "멘토 · 1·2학년 재학생 3명"
+        category: "Peer Mentoring"
+        icon: "fa-solid fa-people-group"
+        content: "재학생 멘티 대상 학교 생활, 대외활동 등 멘토링"
+
+      - title: "전북대학교 큰사람 프로젝트 - 블랙벨트"
+        slug: "jbnu-big-person-black-belt"
+        period: "재학 중"
+        role: "블랙벨트 취득 · 총장상 수령 예정"
+        category: "Achievement"
+        icon: "fa-solid fa-medal"
+        content: "교과·비교과 활동을 꾸준히 수행해 교내 장학제도 최고 등급인 블랙벨트 취득"
+
+      - title: "이마트24"
+        slug: "emart24"
+        period: "2023 ~ 2024"
+        role: "상품 관리 · 고객 응대"
+        category: "Customer Service"
+        icon: "fa-solid fa-store"
+        content: "잼버리 기간 외국인 고객 급증 상황에서 추가 근무를 자원하며 영어 응대와 돌발 상황 대응 경험"
+
+      - title: "국립익산박물관 문화상품점"
+        slug: "iksan-national-museum-shop"
+        period: "2022.07 ~ 2022.09"
+        role: "문화상품 판매 · 관람객 응대"
+        category: "Museum Service"
+        icon: "fa-solid fa-landmark"
+        content: "문화상품 판매 및 관람객 응대"
 
   # Projects
   projects:
@@ -302,7 +373,7 @@ params:
           pdf: ""
           news: ""
 
-      - title: "잇다 (ITDA) - AI 기반 이동장터 운영 최적화 플랫폼"
+      - title: "ITDA - AI 기반 이동장터 운영 최적화 플랫폼"
         slug: "itda"
         roles: "AI, Lead, PM"
         image: /pic/ITDA.jpg

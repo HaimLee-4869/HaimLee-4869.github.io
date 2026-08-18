@@ -1,3 +1,7 @@
+{{ define "head" }}
+<script defer src="{{ (printf "%sfontawesome-6/all-6.4.2.js" (.Site.Params.staticPath | default "")) | relURL }}"></script>
+{{ end }}
+
 {{ define "main" }}
 <section id="activities" class="activities" style="padding-top: 120px; padding-bottom: 80px;">
   <div class="container">
@@ -12,11 +16,14 @@
 
     <div class="row g-4">
       {{ range .Site.Params.activities.items }}
+      {{ $detailPath := printf "/activities/%s/" .slug }}
       <div class="col-md-6 col-lg-4">
-        <div class="card h-100">
-          {{ if .image }}
-          <img src="{{ .image | absURL }}" class="card-img-top" alt="{{ .title }}">
-          {{ end }}
+        <a href="{{ $detailPath | absURL }}" class="activity-card-link" aria-label="{{ .title }} 상세 보기">
+        <div class="card activity-card h-100">
+          <div class="activity-visual" aria-hidden="true">
+            <i class="{{ .icon }}"></i>
+            <span>{{ .category }}</span>
+          </div>
           <div class="card-body">
             {{ if .period }}
             <small class="text-muted d-block mb-1" style="font-weight: 500; color: var(--pink-hover) !important;">{{ .period }}</small>
@@ -28,6 +35,7 @@
             <p class="card-text">{{ .content | markdownify }}</p>
           </div>
         </div>
+        </a>
       </div>
       {{ end }}
     </div>

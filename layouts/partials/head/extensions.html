@@ -421,6 +421,96 @@ footer #recent-posts {
   border-color: var(--pink-base) !important;
 }
 
+/* Activities 전용 카드 visual · 상세페이지 */
+#activities .activity-card-link {
+  display: block;
+  height: 100%;
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+#activities .activity-visual {
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background: linear-gradient(135deg, #fff8fb 0%, #f9d9e5 55%, #f2bed1 100%);
+  color: var(--pink-deep);
+}
+
+#activities .activity-visual i,
+#activities .activity-visual svg {
+  width: 54px;
+  height: 54px;
+  font-size: 54px;
+}
+
+#activities .activity-visual span {
+  color: #9d5871;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+#activities .activity-card .card-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.activity-detail-icon {
+  width: 74px;
+  height: 74px;
+  margin-bottom: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 22px;
+  color: var(--pink-deep);
+  background: linear-gradient(135deg, #fff8fb, #f5ccdc);
+}
+
+.activity-detail-icon i,
+.activity-detail-icon svg {
+  width: 34px;
+  height: 34px;
+  font-size: 34px;
+}
+
+.activity-meta {
+  padding: 20px 24px;
+  border: 1px solid rgba(229, 139, 170, 0.25);
+  border-radius: 16px;
+  background: #fffafb;
+}
+
+.activity-meta > div {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 16px;
+  padding: 6px 0;
+}
+
+.activity-meta dt {
+  color: var(--pink-deep);
+  font-weight: 700;
+}
+
+.activity-meta dd {
+  margin: 0;
+  color: #3d3d3d;
+}
+
+@media (max-width: 575.98px) {
+  #activities .activity-visual { height: 145px; }
+  #activities .activity-visual i,
+  #activities .activity-visual svg { width: 44px; height: 44px; font-size: 44px; }
+  .activity-meta > div { grid-template-columns: 52px 1fr; gap: 10px; }
+}
+
 /* 타이핑 효과 */
 .typing-cursor::after {
   content: '|';

@@ -1,0 +1,40 @@
+{{ define "head" }}
+<script defer src="{{ (printf "%sfontawesome-6/all-6.4.2.js" (.Site.Params.staticPath | default "")) | relURL }}"></script>
+{{ end }}
+
+{{ define "main" }}
+<section class="activity-detail" style="padding-top: 100px; padding-bottom: 60px;">
+  <div class="container" style="max-width: 820px;">
+    <nav aria-label="breadcrumb" class="detail-breadcrumb mb-4">
+      <a href="{{ "/" | absURL }}">Home</a>
+      <span class="sep">›</span>
+      <a href="{{ "/activities/" | absURL }}">Activities</a>
+      <span class="sep">›</span>
+      <span class="current">{{ .Title }}</span>
+    </nav>
+
+    <a href="{{ "/activities/" | absURL }}" class="back-link mb-3 d-inline-block">← Activities 목록으로</a>
+
+    <div class="activity-detail-icon" aria-hidden="true">
+      <i class="{{ .Params.icon }}"></i>
+    </div>
+
+    <h1 class="detail-title mb-4">{{ .Title }}</h1>
+
+    <dl class="activity-meta mb-5">
+      {{ with .Params.period }}<div><dt>기간</dt><dd>{{ . }}</dd></div>{{ end }}
+      {{ with .Params.institution }}<div><dt>기관</dt><dd>{{ . }}</dd></div>{{ end }}
+      {{ with .Params.role }}<div><dt>역할</dt><dd>{{ . }}</dd></div>{{ end }}
+    </dl>
+
+    <div class="detail-content">
+      {{ .Content }}
+    </div>
+
+    <hr class="pink-divider my-5">
+    <div class="text-center">
+      <a href="{{ "/activities/" | absURL }}" class="back-btn-bottom">← Activities 목록으로 돌아가기</a>
+    </div>
+  </div>
+</section>
+{{ end }}

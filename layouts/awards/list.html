@@ -1,30 +1,123 @@
 {{ define "main" }}
 <section id="awards" class="awards" style="padding-top: 120px; padding-bottom: 80px;">
   <div class="container">
-    <div class="row">
-      <div class="col-12 text-center mb-5">
-        <h2 class="section-title">{{ .Title }}</h2>
-        {{ with .Description }}
-        <p class="lead text-muted">{{ . }}</p>
-        {{ end }}
-      </div>
-    </div>
+    <header class="awards-heading text-center">
+      <h2 class="section-title">{{ .Title }}</h2>
+      {{ with .Description }}<p class="lead text-muted">{{ . }}</p>{{ end }}
+    </header>
 
-    <div class="row g-4">
+    <div class="awards-highlight-list">
       {{ range .Site.Params.achievements.items }}
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100">
-          {{ if .image }}
-          <img src="{{ .image | absURL }}" class="card-img-top" alt="{{ .title }}">
-          {{ end }}
-          <div class="card-body">
-            <h3 class="card-title h6">{{ .title }}</h3>
-            <p class="card-text">{{ .content | markdownify }}</p>
-          </div>
+      <a class="award-highlight-row" href="{{ .href | relURL }}" aria-label="{{ .title }} 프로젝트 보기">
+        <div class="award-row-copy">
+          <span class="award-kicker">{{ .kicker }}</span>
+          <h3 class="award-title"><span class="award-title-text">{{ .title }}</span></h3>
+          <p class="award-description">{{ .content }}</p>
         </div>
-      </div>
+        <span class="award-arrow" aria-hidden="true">→</span>
+      </a>
       {{ end }}
     </div>
   </div>
 </section>
+
+<style>
+  #awards {
+    --awards-pink: #d97b9a;
+    --awards-pink-deep: #b85f7d;
+    --awards-divider: #e9e5e7;
+    --awards-text: #252227;
+    --awards-muted: #686168;
+  }
+
+  #awards .awards-heading { margin-bottom: 34px; }
+  #awards .awards-heading .lead { margin-bottom: 0; }
+  #awards .awards-highlight-list {
+    max-width: 1080px;
+    margin: 0 auto;
+    border-top: 1px solid var(--awards-divider);
+  }
+  #awards .award-highlight-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 6px;
+    border-bottom: 1px solid var(--awards-divider);
+    color: inherit;
+    text-decoration: none;
+    background: transparent;
+    box-shadow: none;
+    cursor: pointer;
+    transition: transform 220ms ease;
+  }
+  #awards .award-row-copy { min-width: 0; }
+  #awards .award-kicker {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--awards-pink-deep);
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: .075em;
+  }
+  #awards .award-title {
+    margin: 0;
+    color: var(--awards-text);
+    font-size: clamp(19px, 2vw, 21px);
+    font-weight: 750;
+    line-height: 1.38;
+  }
+  #awards .award-title-text {
+    position: relative;
+    z-index: 0;
+  }
+  #awards .award-title-text::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: .02em;
+    width: min(190px, 42%);
+    height: .34em;
+    border-radius: 2px;
+    background: rgba(244, 181, 201, .5);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 240ms ease;
+  }
+  #awards .award-description {
+    max-width: 960px;
+    margin: 5px 0 0;
+    color: var(--awards-muted);
+    font-size: 14px;
+    font-weight: 450;
+    line-height: 1.55;
+  }
+  #awards .award-arrow {
+    color: var(--awards-pink-deep);
+    font-size: 21px;
+    transition: transform 220ms ease;
+  }
+  #awards .award-highlight-row:hover,
+  #awards .award-highlight-row:focus-visible { transform: translateX(6px); }
+  #awards .award-highlight-row:hover .award-title-text::after,
+  #awards .award-highlight-row:focus-visible .award-title-text::after { transform: scaleX(1); }
+  #awards .award-highlight-row:hover .award-arrow,
+  #awards .award-highlight-row:focus-visible .award-arrow { transform: translateX(4px); }
+  #awards .award-highlight-row:focus-visible {
+    outline: 2px solid rgba(217, 123, 154, .45);
+    outline-offset: 3px;
+  }
+
+  @media (max-width: 640px) {
+    #awards .awards-heading { margin-bottom: 25px; }
+    #awards .award-highlight-row {
+      gap: 12px;
+      padding: 18px 2px;
+    }
+    #awards .award-title { font-size: 17px; }
+    #awards .award-description { font-size: 13px; }
+    #awards .award-arrow { align-self: center; font-size: 19px; }
+  }
+</style>
 {{ end }}

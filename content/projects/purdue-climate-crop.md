@@ -17,11 +17,11 @@ links:
 summary: "Purdue PAGE Program에서 1981~2015년 미국 2,644개 카운티의 기후·토양·수확량 데이터를 분석했습니다. 9개 모델을 비교해 LightGBM 공간 교차검증 R² 0.73을 확보하고, 29℃ 이상 극한고온의 영향을 분석했습니다. 이후 ML 예측값을 2,056개 카운티의 작물 배분 최적화 문제로 확장해 GA·SA·TS를 비교하고 전환비용과 기후손실 회복의 trade-off를 분석했습니다."
 ---
 
-Purdue University PAGE Program에서 기후변화에 따른 미국 작물 생산 리스크를 분석하는 **4인 팀 연구**를 수행했습니다. 연구 기간은 **2026.06 ~ 2026.07**입니다.
+Purdue University PAGE Program에서 **기후변화에 따른 미국 작물 생산 리스크**를 분석하는 4인 팀 연구를 수행했습니다. 
 
-연구의 출발점은 단순히 미래 수확량 감소를 예측하는 것이 아니라, “제한된 경작지에서 어떤 지역에 어떤 작물을 배분해야 기후변화 피해를 줄일 수 있는가”라는 의사결정 문제였습니다.
+단순히 미래 수확량 감소를 예측하는 것을 넘어서 “제한된 경작지에서 어떤 지역에 어떤 작물을 배분해야 기후변화 피해를 줄일 수 있는가”라는 질문을 확장하였습니다.
 
-연구를 **ML 기반 수확량 예측 → 기후 영향 해석 → 작물 배분 최적화**로 연결했습니다.
+그래서 연구를 **ML 기반 수확량 예측 → 기후 영향 해석 → 작물 배분 최적화**로 연결했습니다.
 
 ## 35년 × 2,644개 카운티 기후·농업 데이터
 
@@ -38,9 +38,9 @@ Purdue University PAGE Program에서 기후변화에 따른 미국 작물 생산
 
 ### 온도 분포의 구조적 제약 처리
 
-121개 temperature bin의 합이 항상 184일로 고정돼 있기 때문에 perfect collinearity가 발생할 수 있었습니다. 이에 reference bin 하나를 제거하고, 누락값은 `184 - 나머지 bin의 합`으로 복원하는 방식으로 전처리했습니다.
+121개 temperature bin의 합이 항상 184일로 고정돼 있기 때문에 perfect collinearity가 발생할 수 있었습니다. 그래서 reference bin 하나를 제거하고, 누락값은 `184 - 나머지 bin의 합`으로 복원하는 방식으로 전처리했습니다.
 
-## 다중공선성이 모델 선택을 바꿨다
+## 다중공선성 문제
 
 인접 temperature bin 사이의 Pearson correlation이 **0.94 이상**으로 나타났습니다. 이 구조에서는 단순 OLS의 성능과 안정성이 크게 떨어질 수 있다고 판단해 다음과 같이 정규화 선형모델과 tree ensemble을 포함한 **9개 모델**을 비교했습니다.
 
@@ -56,7 +56,7 @@ Purdue University PAGE Program에서 기후변화에 따른 미국 작물 생산
 
 최종적으로 **LightGBM**이 가장 좋은 예측 성능을 보였습니다.
 
-## Random Split을 그대로 믿지 않다
+## 검증
 
 같은 county의 지역적 특징이 train/test에 동시에 포함되면 모델이 지역 자체를 기억해 성능이 과대평가될 수 있다고 판단했습니다. 따라서 county 단위 Spatial Cross-Validation을 적용했습니다.
 
@@ -65,9 +65,9 @@ Purdue University PAGE Program에서 기후변화에 따른 미국 작물 생산
 - **Spatial CV R² ≈ 0.73**
 - **Rolling-Origin temporal validation R² ≈ 0.656**
 
-또한 Random Split을 사용할 경우 약 **+0.2 수준의 성능 inflation**이 발생할 수 있음을 확인했습니다. 핵심은 높은 숫자를 만드는 것보다 실제 새로운 지역과 미래 시점에서도 모델이 작동하는지 검증하는 것이었습니다.
+또한 Random Split을 사용할 경우 약 **+0.2 수준의 성능 inflation**이 발생할 수 있음을 확인했습니다. 높은 숫자를 만드는 것보다 실제 새로운 지역과 미래 시점에서도 모델이 작동하는지 검증하고자 했습니다.
 
-## 평균기온보다 극한고온 노출이 중요했다
+## 평균기온보다 극한고온 노출이 중요
 
 EDA에서 평균기온이 유사한 지역도 **29℃ 이상 극한고온**에 노출된 일수에 따라 수확량이 크게 달라질 수 있음을 확인했습니다.
 
@@ -83,7 +83,7 @@ LightGBM에서 토양 pH 등 일부 토양변수가 높은 feature importance를
 
 카운티와 연도 **Fixed Effects**를 함께 통제한 모델에서도 극한고온의 부정적 영향이 유지됐습니다. 29℃ 이상 노출이 하루 증가할 때 옥수수 수확량이 약 1.67 bu/ac 감소하는 관계가 나타났고, 28~31℃ threshold 범위에서도 부정적인 방향이 일관되게 유지됐습니다.
 
-이는 완전한 인과관계를 증명한 결과가 아니라, county/year fixed effects를 통제한 모델에서도 극한고온의 부정적 영향이 유지된 것으로 해석했습니다.
+완전한 인과관계를 증명한 결과가 아니라, county/year fixed effects를 통제한 모델에서도 극한고온의 부정적 영향이 유지된 것으로 해석했습니다.
 
 ## Prediction → Optimization
 
@@ -104,7 +104,7 @@ LightGBM에서 토양 pH 등 일부 토양변수가 높은 feature importance를
 
 먼저 switching cost를 고려하지 않고 각 county에서 margin이 가장 높은 작물을 선택하는 Greedy 방식을 baseline으로 구성했습니다.
 
-**+2℃ 가정 기반 최적화 simulation**에서 약 30%의 경작지 변경과 약 23%의 warming loss recovery가 나타났습니다. 다만 이는 switching cost를 무시한 theoretical ceiling에 가까웠습니다.
+**+2℃ 가정 기반 최적화 simulation**에서 약 30%의 경작지 변경과 약 23%의 warming loss recovery가 나타났습니다. 다만 switching cost를 무시한 theoretical ceiling에 가까웠습니다.
 
 이에 실제 문제를 “어떻게 가장 적게 바꾸면서 최대한 많은 피해를 회복할 것인가”로 재정의했습니다.
 
@@ -118,7 +118,7 @@ LightGBM에서 토양 pH 등 일부 토양변수가 높은 feature importance를
 
 switching cost coefficient λ를 변화시키며 경작지 변경 비율과 warming-loss recovery 사이의 trade-off curve를 분석했습니다. 약 **λ ≈ 42** 부근에서 curve의 knee point가 나타났습니다.
 
-**+2℃ 가정 기반 최적화 simulation에서** 약 8%의 경작지 변경으로 약 17%의 warming loss recovery가 나타나는 절충안을 확인했습니다. 이는 실제 미국 농업의 정책 성과나 미래 관측 결과가 아니라, 가정과 제약을 둔 시나리오 분석 결과입니다.
+**+2℃ 가정 기반 최적화 simulation에서** 약 8%의 경작지 변경으로 약 17%의 warming loss recovery가 나타나는 절충안을 확인했습니다. 
 
 ## 최적점의 Robustness
 
