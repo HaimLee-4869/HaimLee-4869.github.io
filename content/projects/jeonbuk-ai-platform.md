@@ -3,7 +3,7 @@ title: "전북특별자치도 생성형 AI 플랫폼 고도화"
 slug: "jeonbuk-ai-platform"
 date: 2026-03-23
 draft: false
-roles: "Team Lead, Collaborative Editing"
+roles: "Team Lead"
 image: /pic/도청.jpg
 emoji: "🏛️"
 badges:

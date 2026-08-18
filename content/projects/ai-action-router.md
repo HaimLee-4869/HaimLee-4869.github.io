@@ -2,6 +2,7 @@
 title: "AI Action Router - 경량 AI Agent 라우팅 모델"
 slug: "ai-action-router"
 draft: false
+roles: "Data, ML, AI Agent"
 image: /pic/swai.jpg
 emoji: "🤖"
 badges:
