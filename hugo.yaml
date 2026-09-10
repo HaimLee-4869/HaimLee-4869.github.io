@@ -95,7 +95,6 @@ params:
   navbar:
     align: ms-auto
     brandName: "EUNJUNG LEE"
-    brandLogo: "/images/nabi.png"
     disableSearch: false
     stickyNavBar:
       enable: true
@@ -116,7 +115,6 @@ params:
     title: "EUNJUNG LEE."
     subtitle: "From data to action."
     content: "Python 기반 데이터 분석·ML 모델링, RAG·AI Agent, 웹 서비스 구현까지 AI 기술을 실제 서비스로 연결합니다."
-    image: /images/nabi.png
     bottomImage:
       enable: true
     button:
